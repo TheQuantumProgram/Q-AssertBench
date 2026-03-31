@@ -1,0 +1,25 @@
+task_id: QAB24
+title: Grover state-preparation uniformity
+family: grover
+property_type: distribution
+qubit_count: 3
+shots: 1024
+llm_source_line_count: 41
+circuit_gate_count: 20
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - expected_probability
+    - probability
+  optional_substrings:
+    - num_input_qubits
+    - uniform superposition
+    - abs(probability - expected_probability)
+fault_variants:
+  - id: missing_superposition
+    path: faults/missing_superposition.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

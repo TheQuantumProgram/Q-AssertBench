@@ -1,0 +1,23 @@
+task_id: QAB05
+title: Check whether a single-qubit gate sequence produces the expected balanced measurement distribution
+family: basic_behavior
+property_type: distribution
+qubit_count: 1
+shots: 1024
+llm_source_line_count: 21
+circuit_gate_count: 3
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - assert abs(p1 - 0.5) < tolerance
+  optional_substrings:
+  - p1 = counts.get("1", 0) / shots
+  - tolerance = 0.05
+fault_variants:
+- id: missing_rx_gate
+  path: faults/faulty_program.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

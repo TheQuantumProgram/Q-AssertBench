@@ -1,0 +1,25 @@
+task_id: QAB36
+title: XOR-linked register relation trap
+family: algorithmic_semantics
+property_type: oracle_relation
+qubit_count: 6
+shots: 1024
+llm_source_line_count: 36
+circuit_gate_count: 8
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - xor_mask
+    - relation_violations
+    - output_bits
+  optional_substrings:
+    - input_bits
+    - register_width
+fault_variants:
+  - id: wrong_xor_mask
+    path: faults/wrong_xor_mask.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

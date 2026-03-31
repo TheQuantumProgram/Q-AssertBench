@@ -1,0 +1,24 @@
+task_id: QAB27
+title: Shor continued-fraction period recovery
+family: shor
+property_type: periodicity
+qubit_count: 3
+shots: 1024
+llm_source_line_count: 24
+circuit_gate_count: 2
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - recovered_periods
+    - period == 4
+  optional_substrings:
+    - expected_peaks
+    - continued fraction
+fault_variants:
+  - id: wrong_fraction_peaks
+    path: faults/wrong_fraction_peaks.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

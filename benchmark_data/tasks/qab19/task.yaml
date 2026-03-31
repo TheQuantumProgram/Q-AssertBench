@@ -1,0 +1,25 @@
+task_id: QAB19
+title: Simon linear-constraint samples
+family: simons
+property_type: oracle_relation
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 32
+circuit_gate_count: 8
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - hidden_period
+    - invalid_outcomes
+  optional_substrings:
+    - '"00"'
+    - '"11"'
+    - linear constraint
+fault_variants:
+  - id: broken_constraint_oracle
+    path: faults/broken_constraint_oracle.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

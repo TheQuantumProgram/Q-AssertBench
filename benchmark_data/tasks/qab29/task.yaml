@@ -1,0 +1,23 @@
+task_id: QAB29
+title: This program prepares a periodic 10-qubit input state and applies the Quantum Fourier Transform
+family: qft
+property_type: periodicity
+qubit_count: 10
+shots: 1024
+llm_source_line_count: 46
+circuit_gate_count: 61
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - assert peak_ratio > 0.75
+  optional_substrings:
+  - peak_centers = [k * (2**10 // 4) for k in range(4)]
+  - represented_peaks += 1
+fault_variants:
+- id: missing_output_reversal
+  path: faults/missing_output_reversal.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

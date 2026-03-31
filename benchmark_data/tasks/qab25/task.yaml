@@ -1,0 +1,24 @@
+task_id: QAB25
+title: Grover post-diffusion marked-state amplification
+family: grover
+property_type: solution_pattern
+qubit_count: 3
+shots: 1024
+llm_source_line_count: 36
+circuit_gate_count: 20
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - target_ratio
+    - target_states = {"101", "110"}
+  optional_substrings:
+    - unexpected_outcomes
+    - after diffusion
+fault_variants:
+  - id: broken_diffusion
+    path: faults/broken_diffusion.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

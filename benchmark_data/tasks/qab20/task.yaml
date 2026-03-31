@@ -1,0 +1,25 @@
+task_id: QAB20
+title: Periodic oracle pair consistency
+family: algorithmic_semantics
+property_type: oracle_relation
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 24
+circuit_gate_count: 6
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - mapping
+    - hidden_period = "11"
+    - paired_inputs
+  optional_substrings:
+    - xor_bitstrings
+    - Periodicity broken
+fault_variants:
+  - id: broken_periodicity
+    path: faults/broken_periodicity.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

@@ -1,0 +1,25 @@
+task_id: QAB35
+title: Even-parity support trap
+family: structured_support
+property_type: entanglement
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 32
+circuit_gate_count: 6
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - legal_ratio
+    - odd_outcomes
+    - even_states
+  optional_substrings:
+    - state.count("1") % 2 == 0
+    - len(even_states)
+fault_variants:
+  - id: odd_parity_leakage
+    path: faults/odd_parity_leakage.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md
