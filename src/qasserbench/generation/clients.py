@@ -164,6 +164,7 @@ class GeminiGenerativeLanguageClient:
     api_base_url: str | None = None
     temperature: float = 0.0
     max_output_tokens: int = 2048
+    request_timeout_seconds: float = 60.0
 
     @property
     def model_id(self) -> str:
@@ -172,6 +173,11 @@ class GeminiGenerativeLanguageClient:
     def generate(self, *, prompt_text: str, task_id: str, trial_index: int) -> GenerationResponse:
         base_url = (self.api_base_url or "https://generativelanguage.googleapis.com").rstrip("/")
         url = f"{base_url}/v1beta/models/{self.model_name}:generateContent"
+        generation_config: dict[str, Any] = {
+            "temperature": self.temperature,
+        }
+        if self.max_output_tokens > 0:
+            generation_config["maxOutputTokens"] = self.max_output_tokens
         request_payload = {
             "contents": [
                 {
@@ -179,10 +185,7 @@ class GeminiGenerativeLanguageClient:
                     "parts": [{"text": prompt_text}],
                 }
             ],
-            "generationConfig": {
-                "temperature": self.temperature,
-                "maxOutputTokens": self.max_output_tokens,
-            },
+            "generationConfig": generation_config,
         }
         body = json.dumps(request_payload).encode("utf-8")
         request = urllib_request.Request(
@@ -195,7 +198,7 @@ class GeminiGenerativeLanguageClient:
             method="POST",
         )
 
-        with urllib_request.urlopen(request) as response:
+        with urllib_request.urlopen(request, timeout=self.request_timeout_seconds) as response:
             response_payload = json.loads(response.read().decode("utf-8"))
 
         candidates = response_payload.get("candidates", []) or []
@@ -213,7 +216,7 @@ class GeminiGenerativeLanguageClient:
                 "api_base_url": base_url,
                 "model_name": self.model_name,
                 "temperature": self.temperature,
-                "max_output_tokens": self.max_output_tokens,
+                "max_output_tokens": self.max_output_tokens if self.max_output_tokens > 0 else None,
                 "response_id": response_payload.get("responseId"),
                 "response_model": response_payload.get("modelVersion"),
                 "finish_reason": candidate.get("finishReason"),
@@ -234,6 +237,7 @@ class AnthropicMessagesClient:
     anthropic_version: str = "2023-06-01"
     temperature: float = 0.0
     max_output_tokens: int = 2048
+    request_timeout_seconds: float = 60.0
 
     @property
     def model_id(self) -> str:
@@ -260,7 +264,7 @@ class AnthropicMessagesClient:
             method="POST",
         )
 
-        with urllib_request.urlopen(request) as response:
+        with urllib_request.urlopen(request, timeout=self.request_timeout_seconds) as response:
             response_payload = json.loads(response.read().decode("utf-8"))
 
         content = response_payload.get("content", "")

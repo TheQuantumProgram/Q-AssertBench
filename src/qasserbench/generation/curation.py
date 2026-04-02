@@ -44,10 +44,18 @@ def missing_trial_counts_by_task(
 ) -> dict[str, int]:
     """Compute remaining trial counts required to reach the target per task."""
 
-    completed = Counter(str(record["task_id"]) for record in records)
+    completed_trials: dict[str, set[int]] = defaultdict(set)
+    for record in records:
+        task_id = str(record["task_id"])
+        try:
+            trial_index = int(record["trial_index"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        completed_trials[task_id].add(trial_index)
+
     deficits: dict[str, int] = {}
     for task_id in task_ids:
-        missing = target_trials - completed[str(task_id)]
+        missing = target_trials - len(completed_trials[str(task_id)])
         if missing > 0:
             deficits[str(task_id)] = missing
     return deficits

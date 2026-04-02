@@ -81,6 +81,8 @@ def run_generation_trials(
     output_path: str | Path,
     record_model_id: str | None = None,
     max_concurrency: int = 1,
+    trial_start_index: int = 1,
+    append: bool = False,
 ) -> Path:
     """Run repeated generation trials and persist the raw responses."""
 
@@ -88,6 +90,8 @@ def run_generation_trials(
         raise ValueError("trial_count must be at least 1.")
     if max_concurrency < 1:
         raise ValueError("max_concurrency must be at least 1.")
+    if trial_start_index < 1:
+        raise ValueError("trial_start_index must be at least 1.")
 
     jobs: list[dict[str, Any]] = []
     for manifest_path in manifest_paths:
@@ -95,7 +99,7 @@ def run_generation_trials(
         task = assets.task
         rendered_prompt = render_task_prompt(assets)
 
-        for trial_index in range(1, trial_count + 1):
+        for trial_index in range(trial_start_index, trial_start_index + trial_count):
             jobs.append(
                 {
                     "manifest_path": str(Path(manifest_path).resolve()),
@@ -131,7 +135,8 @@ def run_generation_trials(
     destination = Path(output_path).resolve()
     destination.parent.mkdir(parents=True, exist_ok=True)
 
-    with destination.open("w", encoding="utf-8") as handle:
+    mode = "a" if append else "w"
+    with destination.open(mode, encoding="utf-8") as handle:
         if max_concurrency == 1 or len(jobs) <= 1:
             for job in jobs:
                 _append_generation_record(handle, build_record(job))

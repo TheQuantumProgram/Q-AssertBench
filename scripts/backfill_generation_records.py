@@ -33,16 +33,16 @@ def _read_task_records(tasks_dir: Path, task_id: str) -> list[dict[str, Any]]:
     return read_generation_records(task_path)
 
 
-def _renumber_trial_indices(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    renumbered: list[dict[str, Any]] = []
-    for index, record in enumerate(records, start=1):
-        updated = dict(record)
-        updated["trial_index"] = index
-        raw_payload = dict(updated.get("raw_payload", {}))
-        raw_payload["trial_index"] = index
-        updated["raw_payload"] = raw_payload
-        renumbered.append(updated)
-    return renumbered
+def _merge_records_by_trial(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: dict[int, dict[str, Any]] = {}
+    for record in records:
+        merged[int(record["trial_index"])] = record
+    return [merged[index] for index in sorted(merged)]
+
+def _next_trial_index(records: list[dict[str, Any]]) -> int:
+    if not records:
+        return 1
+    return max(int(record["trial_index"]) for record in records) + 1
 
 
 def _rewrite_combined_file(model_dir: Path, task_ids: list[str]) -> int:
@@ -73,8 +73,6 @@ def backfill_model_directory(
     model_dir = Path(model_dir).resolve()
     tasks_dir = model_dir / "tasks"
     tasks_dir.mkdir(parents=True, exist_ok=True)
-    supplement_dir = model_dir / "supplements" / supplement_tag
-    supplement_dir.mkdir(parents=True, exist_ok=True)
 
     task_ids = _task_ids(tasks_root)
     existing_records: list[dict[str, Any]] = []
@@ -99,8 +97,9 @@ def backfill_model_directory(
             )
             continue
 
-        supplement_output = supplement_dir / f"{task_id}.jsonl"
-        supplement_tmp_output = supplement_dir / f".{task_id}.tmp.jsonl"
+        task_output = tasks_dir / f"{task_id}.jsonl"
+        existing_task_records = _merge_records_by_trial(_read_task_records(tasks_dir, task_id))
+        next_trial_index = _next_trial_index(existing_task_records)
         print(
             f"[{model_name}] task {task_index}/{len(task_ids)} {task_id} BACKFILL deficit={deficit}",
             flush=True,
@@ -108,7 +107,7 @@ def backfill_model_directory(
         command = [
             python,
             generation_script,
-            str(supplement_tmp_output),
+            str(task_output),
             "--client",
             client_type,
             "--model",
@@ -123,8 +122,11 @@ def backfill_model_directory(
             task_id,
             "--trials",
             str(deficit),
+            "--trial-start-index",
+            str(next_trial_index),
             "--concurrency",
             str(concurrency),
+            "--append",
             "--temperature",
             str(temperature),
             "--max-output-tokens",
@@ -143,16 +145,16 @@ def backfill_model_directory(
         if result.stdout.strip():
             print(result.stdout.strip(), flush=True)
         if result.returncode != 0:
-            if supplement_tmp_output.exists():
-                supplement_tmp_output.unlink()
+            normalized_records = _merge_records_by_trial(_read_task_records(tasks_dir, task_id))
+            if normalized_records:
+                write_generation_records_jsonl(normalized_records, task_output)
+            _rewrite_combined_file(model_dir, task_ids)
             if result.stderr.strip():
                 print(result.stderr.strip(), flush=True)
             raise SystemExit(f"FAILED model={model_name} task={task_id} code={result.returncode}")
 
-        supplement_tmp_output.replace(supplement_output)
-        merged_records = _read_task_records(tasks_dir, task_id) + read_generation_records(supplement_output)
-        merged_records = _renumber_trial_indices(merged_records)
-        write_generation_records_jsonl(merged_records, tasks_dir / f"{task_id}.jsonl")
+        merged_records = _merge_records_by_trial(_read_task_records(tasks_dir, task_id))
+        write_generation_records_jsonl(merged_records, task_output)
         total_records = _rewrite_combined_file(model_dir, task_ids)
         print(
             f"[{model_name}] task {task_index}/{len(task_ids)} {task_id} DONE task_records={len(merged_records)} accumulated_records={total_records}",

@@ -187,6 +187,50 @@ class GenerationDriverTests(unittest.TestCase):
         self.assertTrue(partial_seen)
         self.assertEqual(len(records), 4)
 
+    def test_append_mode_preserves_existing_records(self) -> None:
+        tasks_root = Path("/home/li/project/Q-AssertBench/project_code/benchmark_data/tasks")
+        manifest_paths = discover_task_manifests(tasks_root, task_ids=("QAB01",))
+
+        with TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "generation_records.jsonl"
+            run_generation_trials(
+                manifest_paths=manifest_paths,
+                client=FakeModelClient("fake-model"),
+                trial_count=2,
+                output_path=output_path,
+            )
+            records = read_generation_records(
+                run_generation_trials(
+                    manifest_paths=manifest_paths,
+                    client=FakeModelClient("fake-model"),
+                    trial_count=1,
+                    output_path=output_path,
+                    append=True,
+                )
+            )
+
+        self.assertEqual(len(records), 3)
+        self.assertEqual([record["trial_index"] for record in records], [1, 2, 1])
+
+    def test_trial_start_index_offsets_generated_trial_numbers(self) -> None:
+        tasks_root = Path("/home/li/project/Q-AssertBench/project_code/benchmark_data/tasks")
+        manifest_paths = discover_task_manifests(tasks_root, task_ids=("QAB01",))
+        client = FakeModelClient("fake-model")
+
+        with TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "generation_records.jsonl"
+            records = read_generation_records(
+                run_generation_trials(
+                    manifest_paths=manifest_paths,
+                    client=client,
+                    trial_count=3,
+                    output_path=output_path,
+                    trial_start_index=4,
+                )
+            )
+
+        self.assertEqual([record["trial_index"] for record in records], [4, 5, 6])
+
     def test_manifest_include_mode_resolves_requested_tasks(self) -> None:
         tasks_root = Path("/home/li/project/Q-AssertBench/project_code/benchmark_data/tasks")
 

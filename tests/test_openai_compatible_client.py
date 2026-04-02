@@ -277,11 +277,12 @@ class AnthropicMessagesClientTests(unittest.TestCase):
     def test_posts_messages_request_and_extracts_usage(self) -> None:
         captured: dict[str, object] = {}
 
-        def fake_urlopen(request):
+        def fake_urlopen(request, timeout=None):
             captured["url"] = request.full_url
             captured["method"] = request.get_method()
             captured["headers"] = dict(request.header_items())
             captured["body"] = json.loads(request.data.decode("utf-8"))
+            captured["timeout"] = timeout
             return _FakeAnthropicHTTPResponse(
                 {
                     "id": "msg_123",
@@ -313,6 +314,7 @@ class AnthropicMessagesClientTests(unittest.TestCase):
         self.assertEqual(captured["body"]["messages"], [{"role": "user", "content": "rendered prompt text"}])
         self.assertEqual(captured["body"]["temperature"], 1.0)
         self.assertEqual(captured["body"]["max_tokens"], 2048)
+        self.assertEqual(captured["timeout"], 60.0)
         headers = {str(k).lower(): v for k, v in captured["headers"].items()}
         self.assertEqual(headers["x-api-key"], "claude-secret")
         self.assertEqual(headers["anthropic-version"], "2023-06-01")
@@ -328,11 +330,12 @@ class GeminiGenerativeLanguageClientTests(unittest.TestCase):
     def test_posts_generate_content_request_and_extracts_usage(self) -> None:
         captured: dict[str, object] = {}
 
-        def fake_urlopen(request):
+        def fake_urlopen(request, timeout=None):
             captured["url"] = request.full_url
             captured["method"] = request.get_method()
             captured["headers"] = dict(request.header_items())
             captured["body"] = json.loads(request.data.decode("utf-8"))
+            captured["timeout"] = timeout
             return _FakeAnthropicHTTPResponse(
                 {
                     "responseId": "gem_123",
@@ -380,6 +383,7 @@ class GeminiGenerativeLanguageClientTests(unittest.TestCase):
             captured["body"]["generationConfig"],
             {"temperature": 1.0, "maxOutputTokens": 2048},
         )
+        self.assertEqual(captured["timeout"], 60.0)
         headers = {str(k).lower(): v for k, v in captured["headers"].items()}
         self.assertEqual(headers["x-goog-api-key"], "gemini-secret")
         self.assertEqual(response.text, "```python\nassert True\n```")
@@ -388,6 +392,51 @@ class GeminiGenerativeLanguageClientTests(unittest.TestCase):
         self.assertEqual(response.payload["prompt_tokens"], 18)
         self.assertEqual(response.payload["completion_tokens"], 7)
         self.assertEqual(response.payload["total_tokens"], 25)
+
+    def test_omits_max_output_tokens_when_configured_as_zero(self) -> None:
+        captured: dict[str, object] = {}
+
+        def fake_urlopen(request, timeout=None):
+            captured["body"] = json.loads(request.data.decode("utf-8"))
+            return _FakeAnthropicHTTPResponse(
+                {
+                    "responseId": "gem_456",
+                    "modelVersion": "gemini-2.5-pro",
+                    "candidates": [
+                        {
+                            "content": {
+                                "parts": [{"text": "```python\nassert True\n```"}],
+                            },
+                            "finishReason": "STOP",
+                        }
+                    ],
+                    "usageMetadata": {
+                        "promptTokenCount": 18,
+                        "candidatesTokenCount": 7,
+                        "totalTokenCount": 25,
+                    },
+                }
+            )
+
+        with mock.patch("qasserbench.generation.clients.urllib_request.urlopen", side_effect=fake_urlopen):
+            client = GeminiGenerativeLanguageClient(
+                model_name="gemini-2.5-pro",
+                api_key="gemini-secret",
+                api_base_url="https://generativelanguage.googleapis.com",
+                temperature=1.0,
+                max_output_tokens=0,
+            )
+            response = client.generate(
+                prompt_text="rendered prompt text",
+                task_id="QAB01",
+                trial_index=1,
+            )
+
+        self.assertEqual(
+            captured["body"]["generationConfig"],
+            {"temperature": 1.0},
+        )
+        self.assertIsNone(response.payload["max_output_tokens"])
 
 
 if __name__ == "__main__":

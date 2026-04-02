@@ -34,7 +34,9 @@ def _evaluate_candidate_against_counts(
         # Use a shared scope for globals/locals so comprehensions and generator
         # expressions can still resolve names assigned earlier in the snippet.
         execution_scope = {
-            "counts": counts,
+            # Give the candidate a private copy so in-snippet mutations do not
+            # corrupt the recorded execution result or later gold evaluation.
+            "counts": dict(counts),
             "shots": shots,
             "backend": backend,
             "metadata": MappingProxyType(dict(metadata)),

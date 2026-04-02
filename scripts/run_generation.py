@@ -59,6 +59,8 @@ def run_generation_experiment(
     trial_count: int = 1,
     record_model_id: str | None = None,
     max_concurrency: int = 1,
+    trial_start_index: int = 1,
+    append: bool = False,
 ) -> Path:
     """Run repeated generation for selected tasks and persist raw outputs."""
 
@@ -70,6 +72,8 @@ def run_generation_experiment(
         output_path=output_path,
         record_model_id=record_model_id,
         max_concurrency=max_concurrency,
+        trial_start_index=trial_start_index,
+        append=append,
     )
 
 
@@ -348,10 +352,21 @@ def main() -> int:
     )
     parser.add_argument("--trials", type=int, default=1, help="Number of repeated trials per task")
     parser.add_argument(
-        "--concurrency",
+        "--trial-start-index",
         type=int,
         default=1,
+        help="First trial index to assign in this generation run",
+    )
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=5,
         help="Maximum number of concurrent generation requests",
+    )
+    parser.add_argument(
+        "--append",
+        action="store_true",
+        help="Append records to an existing output JSONL instead of replacing it",
     )
     parser.add_argument("--model-id", default="static-model", help="Model identifier to record")
     parser.add_argument("--model", default=None, help="Model name for OpenAI-compatible client")
@@ -380,7 +395,7 @@ def main() -> int:
         "--max-output-tokens",
         type=int,
         default=2048,
-        help="Maximum completion tokens for OpenAI-compatible generation",
+        help="Maximum completion tokens; pass 0 for Gemini native requests with no maxOutputTokens cap",
     )
     parser.add_argument(
         "--response-text",
@@ -405,6 +420,8 @@ def main() -> int:
         task_ids=args.task_ids,
         trial_count=args.trials,
         max_concurrency=args.concurrency,
+        trial_start_index=args.trial_start_index,
+        append=args.append,
     )
     print(f"wrote generation records to {output_path}")
     return 0

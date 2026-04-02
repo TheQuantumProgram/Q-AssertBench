@@ -1,0 +1,826 @@
+{
+  "alignment_summaries": [
+    {
+      "alignment_counts": {
+        "aligned": 14
+      },
+      "alignment_label": "aligned",
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.25,
+      "pass@5": 0.5,
+      "pass_count": 14,
+      "pass_rate": 1.0,
+      "trial_count": 14
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 5
+      },
+      "alignment_label": "misaligned",
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "trial_count": 5
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 71
+      },
+      "alignment_label": "not_assessable",
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "trial_count": 71
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 650
+      },
+      "alignment_label": "partially_aligned",
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.6486486486486487,
+      "pass@5": 0.8648648648648649,
+      "pass_count": 488,
+      "pass_rate": 0.7507692307692307,
+      "trial_count": 650
+    }
+  ],
+  "category_summaries": [
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 37
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 35,
+      "pass_rate": 0.875,
+      "task_category": "algorithmic_semantics_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_category": "arithmetic_circuit_state_relation",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 11,
+        "partially_aligned": 109
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.6666666666666666,
+      "pass@5": 0.8333333333333334,
+      "pass_count": 73,
+      "pass_rate": 0.6083333333333333,
+      "task_category": "basic_behavior_distribution",
+      "trial_count": 120
+    },
+    {
+      "alignment_counts": {
+        "aligned": 8,
+        "not_assessable": 8,
+        "partially_aligned": 44
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 52,
+      "pass_rate": 0.8666666666666667,
+      "task_category": "basic_behavior_entanglement",
+      "trial_count": 60
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_category": "basic_behavior_state_relation",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 14,
+      "pass_rate": 0.7,
+      "task_category": "bernstein_vazirani_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.85,
+      "task_category": "bernstein_vazirani_solution_pattern",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 38
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 37,
+      "pass_rate": 0.925,
+      "task_category": "deutsch_family_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "not_assessable": 1,
+        "partially_aligned": 38
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 37,
+      "pass_rate": 0.925,
+      "task_category": "deutsch_jozsa_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 12,
+      "pass_rate": 0.6,
+      "task_category": "grover_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 1,
+        "not_assessable": 5,
+        "partially_aligned": 54
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.6666666666666666,
+      "pass@5": 0.6666666666666666,
+      "pass_count": 35,
+      "pass_rate": 0.5833333333333334,
+      "task_category": "grover_solution_pattern",
+      "trial_count": 60
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 6,
+      "pass_rate": 0.3,
+      "task_category": "hhl_solution_pattern",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "not_assessable": 2,
+        "partially_aligned": 14
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_category": "qaoa_solution_pattern",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 5,
+        "partially_aligned": 35
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.425,
+      "task_category": "qft_periodicity",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_category": "qft_state_relation",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_category": "qpe_periodicity",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 11,
+        "partially_aligned": 49
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.3333333333333333,
+      "pass@5": 0.6666666666666666,
+      "pass_count": 25,
+      "pass_rate": 0.4166666666666667,
+      "task_category": "shor_periodicity",
+      "trial_count": 60
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_category": "simons_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 5,
+        "not_assessable": 5,
+        "partially_aligned": 30
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.5,
+      "pass@5": 0.5,
+      "pass_count": 18,
+      "pass_rate": 0.45,
+      "task_category": "simons_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_category": "structured_support_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_category": "structured_support_entanglement",
+      "trial_count": 20
+    }
+  ],
+  "model_summaries": [
+    {
+      "alignment_counts": {
+        "aligned": 14,
+        "misaligned": 5,
+        "not_assessable": 71,
+        "partially_aligned": 650
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.6756756756756757,
+      "pass@5": 0.8648648648648649,
+      "pass_count": 502,
+      "pass_rate": 0.6783783783783783,
+      "trial_count": 740
+    }
+  ],
+  "task_summaries": [
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB01",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.85,
+      "task_id": "QAB02",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB03",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 13,
+      "pass_rate": 0.65,
+      "task_id": "QAB04",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 6,
+      "pass_rate": 0.3,
+      "task_id": "QAB05",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB06",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB07",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB08",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 1,
+        "not_assessable": 4,
+        "partially_aligned": 15
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB09",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 7,
+        "not_assessable": 1,
+        "partially_aligned": 12
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB10",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 20,
+      "pass_rate": 1.0,
+      "task_id": "QAB11",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.85,
+      "task_id": "QAB12",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB13",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB14",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 14,
+      "pass_rate": 0.7,
+      "task_id": "QAB15",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.85,
+      "task_id": "QAB16",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB17",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 2,
+      "pass_rate": 0.1,
+      "task_id": "QAB18",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 5,
+        "not_assessable": 4,
+        "partially_aligned": 11
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB19",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB20",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 9,
+      "pass_rate": 0.45,
+      "task_id": "QAB21",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB22",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB23",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 12,
+      "pass_rate": 0.6,
+      "task_id": "QAB24",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 1,
+        "not_assessable": 2,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB25",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 4,
+      "pass_rate": 0.2,
+      "task_id": "QAB26",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB27",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 6,
+      "pass_rate": 0.3,
+      "task_id": "QAB28",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 8,
+      "pass_rate": 0.4,
+      "task_id": "QAB29",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 5,
+        "partially_aligned": 15
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 5,
+      "pass_rate": 0.25,
+      "task_id": "QAB30",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.85,
+      "task_id": "QAB31",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB32",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB33",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "not_assessable": 2,
+        "partially_aligned": 14
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB34",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "not_assessable": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB35",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB36",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB37",
+      "trial_count": 20
+    }
+  ]
+}

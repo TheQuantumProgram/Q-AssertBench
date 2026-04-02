@@ -1,0 +1,806 @@
+{
+  "alignment_summaries": [
+    {
+      "alignment_counts": {
+        "aligned": 19
+      },
+      "alignment_label": "aligned",
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.25,
+      "pass@5": 0.75,
+      "pass_count": 19,
+      "pass_rate": 1.0,
+      "trial_count": 19
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 179
+      },
+      "alignment_label": "misaligned",
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "trial_count": 179
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 542
+      },
+      "alignment_label": "partially_aligned",
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.3611111111111111,
+      "pass@5": 0.5555555555555556,
+      "pass_count": 220,
+      "pass_rate": 0.4059040590405904,
+      "trial_count": 542
+    }
+  ],
+  "category_summaries": [
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "partially_aligned": 36
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.5,
+      "pass@5": 0.5,
+      "pass_count": 2,
+      "pass_rate": 0.05,
+      "task_category": "algorithmic_semantics_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_category": "arithmetic_circuit_state_relation",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 37,
+        "partially_aligned": 83
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.5,
+      "pass@5": 0.5,
+      "pass_count": 32,
+      "pass_rate": 0.26666666666666666,
+      "task_category": "basic_behavior_distribution",
+      "trial_count": 120
+    },
+    {
+      "alignment_counts": {
+        "aligned": 11,
+        "misaligned": 3,
+        "partially_aligned": 46
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 49,
+      "pass_rate": 0.8166666666666667,
+      "task_category": "basic_behavior_entanglement",
+      "trial_count": 60
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 18,
+        "partially_aligned": 2
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_category": "basic_behavior_state_relation",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_category": "bernstein_vazirani_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 14,
+      "pass_rate": 0.7,
+      "task_category": "bernstein_vazirani_solution_pattern",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 6,
+        "misaligned": 10,
+        "partially_aligned": 24
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.5,
+      "pass@5": 0.5,
+      "pass_count": 10,
+      "pass_rate": 0.25,
+      "task_category": "deutsch_family_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 7,
+        "partially_aligned": 33
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.5,
+      "pass@5": 0.5,
+      "pass_count": 19,
+      "pass_rate": 0.475,
+      "task_category": "deutsch_jozsa_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "aligned": 2,
+        "misaligned": 1,
+        "partially_aligned": 17
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 4,
+      "pass_rate": 0.2,
+      "task_category": "grover_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 24,
+        "partially_aligned": 36
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 26,
+      "pass_rate": 0.43333333333333335,
+      "task_category": "grover_solution_pattern",
+      "trial_count": 60
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_category": "hhl_solution_pattern",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_category": "qaoa_solution_pattern",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 21,
+        "partially_aligned": 19
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_category": "qft_periodicity",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_category": "qft_state_relation",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 16,
+        "partially_aligned": 4
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 3,
+      "pass_rate": 0.15,
+      "task_category": "qpe_periodicity",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 5,
+        "partially_aligned": 55
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.3333333333333333,
+      "pass@5": 0.3333333333333333,
+      "pass_count": 12,
+      "pass_rate": 0.2,
+      "task_category": "shor_periodicity",
+      "trial_count": 60
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_category": "simons_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 39
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.5,
+      "pass_count": 13,
+      "pass_rate": 0.325,
+      "task_category": "simons_oracle_relation",
+      "trial_count": 40
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_category": "structured_support_distribution",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_category": "structured_support_entanglement",
+      "trial_count": 20
+    }
+  ],
+  "model_summaries": [
+    {
+      "alignment_counts": {
+        "aligned": 19,
+        "misaligned": 179,
+        "partially_aligned": 542
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.3783783783783784,
+      "pass@5": 0.5405405405405406,
+      "pass_count": 239,
+      "pass_rate": 0.32297297297297295,
+      "trial_count": 740
+    }
+  ],
+  "task_summaries": [
+    {
+      "alignment_counts": {
+        "misaligned": 16,
+        "partially_aligned": 4
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB01",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 17,
+      "pass_rate": 0.85,
+      "task_id": "QAB02",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 18,
+        "partially_aligned": 2
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB03",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 10,
+        "partially_aligned": 10
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB04",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 11,
+      "pass_rate": 0.55,
+      "task_id": "QAB05",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB06",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 15,
+      "pass_rate": 0.75,
+      "task_id": "QAB07",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 6,
+        "partially_aligned": 14
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 5,
+      "pass_rate": 0.25,
+      "task_id": "QAB08",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 1,
+        "misaligned": 1,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 13,
+      "pass_rate": 0.65,
+      "task_id": "QAB09",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 10,
+        "partially_aligned": 10
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB10",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 10,
+        "partially_aligned": 10
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB11",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 6,
+        "partially_aligned": 14
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 10,
+      "pass_rate": 0.5,
+      "task_id": "QAB12",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 7,
+        "partially_aligned": 13
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB13",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 18,
+      "pass_rate": 0.9,
+      "task_id": "QAB14",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB15",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 14,
+      "pass_rate": 0.7,
+      "task_id": "QAB16",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB17",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB18",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 13,
+      "pass_rate": 0.65,
+      "task_id": "QAB19",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 3,
+        "partially_aligned": 17
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB20",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 5,
+        "partially_aligned": 15
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB21",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 19,
+      "pass_rate": 0.95,
+      "task_id": "QAB22",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 12,
+      "pass_rate": 0.6,
+      "task_id": "QAB23",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "aligned": 2,
+        "misaligned": 1,
+        "partially_aligned": 17
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 4,
+      "pass_rate": 0.2,
+      "task_id": "QAB24",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 12,
+      "pass_rate": 0.6,
+      "task_id": "QAB25",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 10,
+      "pass_rate": 0.5,
+      "task_id": "QAB26",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB27",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "partially_aligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB28",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 16,
+        "partially_aligned": 4
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB29",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB30",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 18,
+        "partially_aligned": 2
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 2,
+      "pass_rate": 0.1,
+      "task_id": "QAB31",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 16,
+        "partially_aligned": 4
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 3,
+      "pass_rate": 0.15,
+      "task_id": "QAB32",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 16,
+      "pass_rate": 0.8,
+      "task_id": "QAB33",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 2,
+        "partially_aligned": 18
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB34",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 4,
+        "partially_aligned": 16
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 1.0,
+      "pass_count": 1,
+      "pass_rate": 0.05,
+      "task_id": "QAB35",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 1,
+        "partially_aligned": 19
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "pass_count": 2,
+      "pass_rate": 0.1,
+      "task_id": "QAB36",
+      "trial_count": 20
+    },
+    {
+      "alignment_counts": {
+        "misaligned": 20
+      },
+      "model_id": "meta-llama/llama-4-scout",
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "pass_count": 0,
+      "pass_rate": 0.0,
+      "task_id": "QAB37",
+      "trial_count": 20
+    }
+  ]
+}

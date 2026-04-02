@@ -87,6 +87,23 @@ class ExecutionRunnerTests(unittest.TestCase):
         self.assertTrue(trial.nominal_assertion.passed)
         self.assertIsNone(trial.nominal_assertion.error_type)
 
+    def test_candidate_mutations_do_not_modify_recorded_execution_counts(self) -> None:
+        nominal_program = _make_program_definition("QAB07", {"000": 2, "111": 2})
+        artifact = extract_candidate_assertion(
+            "counts[3] = 1\nassert counts['000'] == 2",
+            extraction_mode="assertion_block",
+        )
+
+        trial = run_candidate_trial(
+            program=nominal_program,
+            fault_programs={},
+            artifact=artifact,
+            config=ExecutionConfig(shots=4, backend="test-backend"),
+        )
+
+        self.assertTrue(trial.nominal_assertion.passed)
+        self.assertEqual(trial.nominal_execution.counts, {"000": 2, "111": 2})
+
 
 if __name__ == "__main__":
     unittest.main()
