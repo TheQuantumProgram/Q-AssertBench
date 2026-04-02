@@ -59,7 +59,10 @@ def backfill_model_directory(
     model_dir: str | Path,
     model_name: str,
     tasks_root: str | Path,
+    client_type: str,
     api_key_env: str,
+    api_base_url: str | None,
+    anthropic_version: str,
     target_trials: int,
     temperature: float,
     max_output_tokens: int,
@@ -97,36 +100,42 @@ def backfill_model_directory(
             continue
 
         supplement_output = supplement_dir / f"{task_id}.jsonl"
+        supplement_tmp_output = supplement_dir / f".{task_id}.tmp.jsonl"
         print(
             f"[{model_name}] task {task_index}/{len(task_ids)} {task_id} BACKFILL deficit={deficit}",
             flush=True,
         )
+        command = [
+            python,
+            generation_script,
+            str(supplement_tmp_output),
+            "--client",
+            client_type,
+            "--model",
+            model_name,
+            "--model-id",
+            model_name,
+            "--tasks-root",
+            str(Path(tasks_root).resolve()),
+            "--api-key-env",
+            api_key_env,
+            "--task-id",
+            task_id,
+            "--trials",
+            str(deficit),
+            "--concurrency",
+            str(concurrency),
+            "--temperature",
+            str(temperature),
+            "--max-output-tokens",
+            str(max_output_tokens),
+            "--anthropic-version",
+            anthropic_version,
+        ]
+        if api_base_url:
+            command.extend(["--api-base-url", api_base_url])
         result = subprocess.run(
-            [
-                python,
-                generation_script,
-                str(supplement_output),
-                "--client",
-                "openai-compatible",
-                "--model",
-                model_name,
-                "--model-id",
-                model_name,
-                "--tasks-root",
-                str(Path(tasks_root).resolve()),
-                "--api-key-env",
-                api_key_env,
-                "--task-id",
-                task_id,
-                "--trials",
-                str(deficit),
-                "--concurrency",
-                str(concurrency),
-                "--temperature",
-                str(temperature),
-                "--max-output-tokens",
-                str(max_output_tokens),
-            ],
+            command,
             cwd=project_root,
             text=True,
             capture_output=True,
@@ -134,10 +143,13 @@ def backfill_model_directory(
         if result.stdout.strip():
             print(result.stdout.strip(), flush=True)
         if result.returncode != 0:
+            if supplement_tmp_output.exists():
+                supplement_tmp_output.unlink()
             if result.stderr.strip():
                 print(result.stderr.strip(), flush=True)
             raise SystemExit(f"FAILED model={model_name} task={task_id} code={result.returncode}")
 
+        supplement_tmp_output.replace(supplement_output)
         merged_records = _read_task_records(tasks_dir, task_id) + read_generation_records(supplement_output)
         merged_records = _renumber_trial_indices(merged_records)
         write_generation_records_jsonl(merged_records, tasks_dir / f"{task_id}.jsonl")
@@ -159,9 +171,25 @@ def main() -> int:
         help="Root directory containing benchmark tasks",
     )
     parser.add_argument(
+        "--client",
+        choices=("openai-compatible", "anthropic-native", "gemini-native"),
+        default="openai-compatible",
+        help="Generation client backend used for supplement runs",
+    )
+    parser.add_argument(
         "--api-key-env",
         default="OPENROUTER_API_KEY",
         help="Environment variable containing the API key",
+    )
+    parser.add_argument(
+        "--api-base-url",
+        default=None,
+        help="Optional base URL for the selected client",
+    )
+    parser.add_argument(
+        "--anthropic-version",
+        default="2023-06-01",
+        help="Anthropic API version when using --client anthropic-native",
     )
     parser.add_argument("--target-trials", type=int, default=20, help="Desired trials per task")
     parser.add_argument("--temperature", type=float, default=1.0, help="Generation temperature")
@@ -183,7 +211,10 @@ def main() -> int:
         model_dir=args.model_dir,
         model_name=args.model_name,
         tasks_root=args.tasks_root,
+        client_type=args.client,
         api_key_env=args.api_key_env,
+        api_base_url=args.api_base_url,
+        anthropic_version=args.anthropic_version,
         target_trials=args.target_trials,
         temperature=args.temperature,
         max_output_tokens=args.max_output_tokens,

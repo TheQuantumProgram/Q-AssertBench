@@ -25,9 +25,9 @@ Included generated-instance runs:
   - task coverage: `37/37`
   - total records: `740`
 - `generated_instances/gemini-main/gemini-3.1-flash-lite-preview`
-  - status: partial / in progress when snapped
-  - task coverage: `7/37`
-  - total records: `140`
+  - status: complete
+  - task coverage: `37/37`
+  - total records: `740`
 
 Included evaluation artifacts:
 
@@ -38,6 +38,6 @@ Included evaluation artifacts:
 Notes:
 
 - This release intentionally excludes smoke tests, token probes, and precheck runs.
-- The Gemini run was preserved as-is at the time of export; it was not complete.
-- The Gemini snapshot still contains `_corrupt_backup_20260402/` and `_resume_tmp/` because those were part of the live recovery state when this release was created.
+- Under `generated_instances/`, each uploaded model snapshot keeps only the official `generation_records.jsonl` and `tasks/QAB*.jsonl` files.
+- Temporary or recovery-only artifacts such as `_resume_tmp/`, `_corrupt_backup_*/`, `supplements/`, and similar intermediate files are intentionally excluded from this release snapshot.
 - The release is a tracked copy of selected artifacts. The original working directories under `experiment_data/generated_instances`, `experiment_data/raw_results`, and `experiment_data/summaries` were left in place.
