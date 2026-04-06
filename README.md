@@ -8,16 +8,9 @@ This directory contains the runnable benchmark framework, task catalog, and exec
 
 This repository targets Python 3.10+.
 
-On Debian/Ubuntu, you may need to install the system venv package first:
-
-```bash
-sudo apt install python3-venv
-```
-
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m ensurepip --upgrade
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
@@ -28,68 +21,37 @@ python -m pip install -r requirements.txt
 python scripts/validate_tasks.py
 ```
 
-### 3. Generate raw model outputs with a client
-
-For a single OpenAI-compatible provider, pass the client settings on the command line:
-
-```bash
-export QAB_API_KEY="your-api-key"
-
-python scripts/run_generation.py \
-  experiment_data/generated_instances/quickstart/single_model/generation_records.jsonl \
-  --client openai-compatible \
-  --tasks-root benchmark_data/tasks \
-  --task-id QAB01 \
-  --trials 2 \
-  --concurrency 1 \
-  --model-id your-provider/your-model \
-  --model your-provider/your-model \
-  --api-base-url https://your-provider.example/v1 \
-  --api-key-env QAB_API_KEY \
-  --temperature 1.0 \
-  --max-output-tokens 2048
-```
-
-For batch generation, start from the reference manifest at `examples/client_templates/openai-compatible.example.yaml`:
+### 3. Generate assertion candidates
 
 ```bash
 cp examples/client_templates/openai-compatible.example.yaml /tmp/qab-client.yaml
-# Edit base_url, output_dir, task_ids, and model_id entries for your provider.
-
 export QAB_API_KEY="your-api-key"
 python scripts/run_generation.py --manifest /tmp/qab-client.yaml
 ```
 
-Important notes about client templates:
-
-- No API key is stored in this repository.
-- Template manifests are reference configurations only.
-- Different providers may require different base URLs, model names, temperatures, token limits, timeouts, or even a different client mode such as `anthropic-native` or `gemini-native`.
-- If you store credentials in `.env.local`, keep that file private and out of version control.
-
 ### 4. Evaluate generated results
-
-For a single generated JSONL file:
 
 ```bash
 python scripts/run_evaluation.py \
-  experiment_data/generated_instances/quickstart/single_model/generation_records.jsonl \
-  experiment_data/raw_results/quickstart/single_model/trial_results.jsonl
-
-python scripts/summarize_results.py \
-  experiment_data/raw_results/quickstart/single_model/trial_results.jsonl \
-  experiment_data/summaries/quickstart/single_model/summary.json
+  path/to/generation_records.jsonl \
+  path/to/trial_results.jsonl
 ```
 
-For a batch run produced from a manifest, repeat the same evaluation pipeline for every generated `generation_records.jsonl`:
+### 5. Summarize trial-level results
 
 ```bash
-find experiment_data/generated_instances/quickstart-openai-compatible -name generation_records.jsonl | while read -r gen; do
+python scripts/summarize_results.py \
+  path/to/trial_results.jsonl \
+  path/to/summary.json
+```
+
+### 6. Batch-evaluate a run directory
+
+```bash
+find experiment_data/generated_instances/YOUR_RUN -name generation_records.jsonl | while read -r gen; do
   model_dir=$(dirname "$gen")
   rel=${model_dir#experiment_data/generated_instances/}
-
-  mkdir -p "experiment_data/raw_results/$rel"
-  mkdir -p "experiment_data/summaries/$rel"
+  mkdir -p "experiment_data/raw_results/$rel" "experiment_data/summaries/$rel"
 
   python scripts/run_evaluation.py \
     "$gen" \
@@ -101,7 +63,16 @@ find experiment_data/generated_instances/quickstart-openai-compatible -name gene
 done
 ```
 
-The evaluation stage is the part used to score the released experiment data: raw model generations are executed against the nominal and faulty programs, classified into benchmark outcomes, and then aggregated into summary metrics.
+## Client Notes
+
+The reference manifest at `examples/client_templates/openai-compatible.example.yaml` is intentionally provider-safe:
+
+- copy it to a writable location and edit the provider-specific fields before running `run_generation.py`
+- no API key is stored in the repository
+- you must supply your own key through an environment variable such as `QAB_API_KEY`
+- different providers may require different base URLs, model IDs, token limits, timeouts, or even a different client mode such as `anthropic-native` or `gemini-native`
+
+The released evaluation pipeline is provider-agnostic once a `generation_records.jsonl` file has been produced. This scoring stage is the canonical path used for the released experiment data.
 
 ## Project Structure
 
@@ -113,7 +84,7 @@ The evaluation stage is the part used to score the released experiment data: raw
 - `scripts/validate_tasks.py`: structural validation for the task catalog
 - `examples/client_templates/`: provider-safe reference manifests with no embedded keys
 - `experiments/`: experiment manifests used for the released study configurations
-- `experiment_data/`: generated outputs, evaluated results, summaries, and formal-release snapshots
+- `experiment_data/formal_release/2026-04-02/`: paper-aligned released generations, raw results, and summaries
 
 ## Project Summary
 

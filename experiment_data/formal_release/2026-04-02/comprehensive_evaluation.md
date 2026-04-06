@@ -11,9 +11,9 @@ This report summarizes the original six complete formal-generation runs that wer
 - `gemini-3.1-flash-lite-preview`
 - `meta-llama/llama-4-scout`
 
-The later-added `gemini-2.5-flash` and `gemini-3-flash-preview` formal runs are included in the release snapshot and each has its own `trial_results.jsonl` and `summary.json`, but they are not folded into the six-model comparison tables below.
-
 All model summaries below are based on `37` tasks with `20` trials per task (`740` trials/model).
+
+In this release snapshot, generated instances, raw results, and summaries are organized directly by model under their respective top-level directories.
 
 ## Model-Level Results
 
