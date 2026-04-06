@@ -4,7 +4,14 @@ This directory contains the runnable benchmark framework, task catalog, and exec
 
 ## Quick Start
 
-### 1. Create the environment
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/TheQuantumProgram/Q-AssertBench.git
+cd Q-AssertBench
+```
+
+### 2. Create the environment
 
 This repository targets Python 3.10+.
 
@@ -16,13 +23,13 @@ python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
 ```
 
-### 2. Validate the benchmark tasks
+### 3. Validate the benchmark tasks
 
 ```bash
 python scripts/validate_tasks.py
 ```
 
-### 3. Generate assertion candidates
+### 4. Generate assertion candidates
 
 ```bash
 cp examples/client_templates/openai-compatible.example.yaml /tmp/qab-client.yaml
@@ -30,7 +37,7 @@ export QAB_API_KEY="your-api-key"
 python scripts/run_generation.py --manifest /tmp/qab-client.yaml
 ```
 
-### 4. Evaluate generated results
+### 5. Evaluate generated results
 
 ```bash
 python scripts/run_evaluation.py \
@@ -38,7 +45,7 @@ python scripts/run_evaluation.py \
   path/to/trial_results.jsonl
 ```
 
-### 5. Summarize trial-level results
+### 6. Summarize trial-level results
 
 ```bash
 python scripts/summarize_results.py \
@@ -46,7 +53,7 @@ python scripts/summarize_results.py \
   path/to/summary.json
 ```
 
-### 6. Batch-evaluate a run directory
+### 7. Batch-evaluate a run directory
 
 ```bash
 find experiment_data/generated_instances/YOUR_RUN -name generation_records.jsonl | while read -r gen; do
