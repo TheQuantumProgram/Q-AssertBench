@@ -21,14 +21,14 @@ cd Q-AssertBench
 
 ### 2. Create the environment
 
-This repository targets Python 3.10+. The commands below assume an Ubuntu/Linux shell; other environments may need minor adjustments to shell syntax or virtual-environment activation.
+This repository targets Python 3.10+. The commands below assume an Ubuntu/Linux shell; other environments may need minor adjustments to shell syntax or virtual-environment activation. On Debian/Ubuntu, if `python3 -m venv .venv` reports that `ensurepip` is unavailable, install `python3-venv` first.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python -m pip install -e . --no-deps
+python -m pip install -e . --no-deps --no-build-isolation
 ```
 
 ### 3. Validate the benchmark tasks
