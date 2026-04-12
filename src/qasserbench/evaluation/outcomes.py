@@ -22,6 +22,7 @@ class TrialClassification:
     """Behavioral outcome plus alignment signal for one trial."""
 
     outcome: str
+    failure_mode: str
     alignment_label: str
     failure_tags: tuple[str, ...]
     fault_detection_rate: float

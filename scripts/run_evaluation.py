@@ -152,6 +152,7 @@ def evaluate_generation_records(
                 "fault_status": fault_status,
                 "overall_outcome": classification.outcome,
                 "outcome": classification.outcome,
+                "failure_mode": classification.failure_mode,
                 "alignment_label": classification.alignment_label,
                 "alignment_score": alignment.score,
                 "alignment_components": dict(alignment.components),
