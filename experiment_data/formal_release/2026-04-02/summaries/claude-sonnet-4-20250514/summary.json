@@ -6,8 +6,8 @@
       },
       "alignment_label": "aligned",
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.2727272727272727,
-      "pass@5": 0.6363636363636364,
+      "pass@3": 1.0,
+      "pass@5": 1.0,
       "pass_count": 77,
       "pass_rate": 1.0,
       "trial_count": 77
@@ -18,7 +18,7 @@
       },
       "alignment_label": "misaligned",
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -30,8 +30,8 @@
       },
       "alignment_label": "partially_aligned",
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.6216216216216216,
-      "pass@5": 0.7567567567567568,
+      "pass@3": 0.796446417499049,
+      "pass@5": 0.8330689232392019,
       "pass_count": 452,
       "pass_rate": 0.691131498470948,
       "trial_count": 654
@@ -43,8 +43,8 @@
         "partially_aligned": 40
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.5,
-      "pass@5": 0.5,
+      "pass@3": 0.7298245614035088,
+      "pass@5": 0.8573271413828689,
       "pass_count": 16,
       "pass_rate": 0.4,
       "task_category": "algorithmic_semantics_oracle_relation",
@@ -55,8 +55,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8947368421052632,
+      "pass@5": 0.9837461300309598,
       "pass_count": 10,
       "pass_rate": 0.5,
       "task_category": "arithmetic_circuit_state_relation",
@@ -68,8 +68,8 @@
         "partially_aligned": 111
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.6666666666666666,
-      "pass@5": 0.8333333333333334,
+      "pass@3": 0.808625730994152,
+      "pass@5": 0.8283668730650154,
       "pass_count": 85,
       "pass_rate": 0.7083333333333334,
       "task_category": "basic_behavior_distribution",
@@ -81,7 +81,7 @@
         "partially_aligned": 59
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 60,
       "pass_rate": 1.0,
@@ -93,8 +93,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_category": "basic_behavior_state_relation",
@@ -106,8 +106,8 @@
         "partially_aligned": 14
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_category": "bernstein_vazirani_distribution",
@@ -118,7 +118,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -131,7 +131,7 @@
         "partially_aligned": 37
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 40,
       "pass_rate": 1.0,
@@ -143,7 +143,7 @@
         "partially_aligned": 40
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 39,
       "pass_rate": 0.975,
@@ -156,7 +156,7 @@
         "partially_aligned": 17
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -169,8 +169,8 @@
         "partially_aligned": 38
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.6666666666666666,
-      "pass@5": 1.0,
+      "pass@3": 0.9649122807017544,
+      "pass@5": 0.9945820433436533,
       "pass_count": 50,
       "pass_rate": 0.8333333333333334,
       "task_category": "grover_solution_pattern",
@@ -181,7 +181,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -193,8 +193,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_category": "qaoa_solution_pattern",
@@ -205,8 +205,8 @@
         "partially_aligned": 40
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.07500000000000001,
+      "pass@5": 0.125,
       "pass_count": 1,
       "pass_rate": 0.025,
       "task_category": "qft_periodicity",
@@ -218,7 +218,7 @@
         "partially_aligned": 18
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -230,7 +230,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -243,8 +243,8 @@
         "partially_aligned": 42
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.3333333333333333,
-      "pass@5": 0.6666666666666666,
+      "pass@3": 0.5529239766081872,
+      "pass@5": 0.6560887512899897,
       "pass_count": 25,
       "pass_rate": 0.4166666666666667,
       "task_category": "shor_periodicity",
@@ -256,7 +256,7 @@
         "partially_aligned": 15
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -269,8 +269,8 @@
         "partially_aligned": 23
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.7543859649122807,
+      "pass@5": 0.8591331269349846,
       "pass_count": 24,
       "pass_rate": 0.6,
       "task_category": "simons_oracle_relation",
@@ -281,7 +281,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -293,7 +293,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -309,8 +309,8 @@
         "partially_aligned": 654
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.7027027027027027,
-      "pass@5": 0.8378378378378378,
+      "pass@3": 0.8234945471787577,
+      "pass@5": 0.8603150363986277,
       "pass_count": 529,
       "pass_rate": 0.7148648648648649,
       "trial_count": 740
@@ -322,7 +322,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -334,7 +334,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -346,8 +346,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_id": "QAB03",
@@ -358,7 +358,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -371,7 +371,7 @@
         "partially_aligned": 11
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -383,8 +383,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8552631578947368,
+      "pass@5": 0.9702012383900929,
       "pass_count": 9,
       "pass_rate": 0.45,
       "task_id": "QAB06",
@@ -395,7 +395,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -407,7 +407,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -420,7 +420,7 @@
         "partially_aligned": 19
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -432,7 +432,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -445,7 +445,7 @@
         "partially_aligned": 19
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -458,7 +458,7 @@
         "partially_aligned": 18
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -470,7 +470,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -482,7 +482,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -495,8 +495,8 @@
         "partially_aligned": 14
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_id": "QAB15",
@@ -507,7 +507,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -520,7 +520,7 @@
         "partially_aligned": 15
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -532,8 +532,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_id": "QAB18",
@@ -545,7 +545,7 @@
         "partially_aligned": 3
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -557,8 +557,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_id": "QAB20",
@@ -569,8 +569,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB21",
@@ -582,7 +582,7 @@
         "partially_aligned": 18
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -595,8 +595,8 @@
         "partially_aligned": 10
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8947368421052632,
+      "pass@5": 0.9837461300309598,
       "pass_count": 10,
       "pass_rate": 0.5,
       "task_id": "QAB23",
@@ -608,7 +608,7 @@
         "partially_aligned": 17
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -621,7 +621,7 @@
         "partially_aligned": 8
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -633,8 +633,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_id": "QAB26",
@@ -646,7 +646,7 @@
         "partially_aligned": 2
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -658,7 +658,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -670,7 +670,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -682,8 +682,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB30",
@@ -694,7 +694,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -706,7 +706,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -718,8 +718,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8947368421052632,
+      "pass@5": 0.9837461300309598,
       "pass_count": 10,
       "pass_rate": 0.5,
       "task_id": "QAB33",
@@ -730,8 +730,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB34",
@@ -742,7 +742,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -754,8 +754,8 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_id": "QAB36",
@@ -766,7 +766,7 @@
         "partially_aligned": 20
       },
       "model_id": "claude-sonnet-4-20250514",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,

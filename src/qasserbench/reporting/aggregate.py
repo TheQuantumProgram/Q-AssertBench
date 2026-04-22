@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import Counter, defaultdict
+from math import comb
 from typing import Any
 
 
@@ -25,12 +26,25 @@ def _pass_at_k(records: list[dict[str, Any]], k: int) -> float:
     if not by_task:
         return 0.0
 
-    successes = 0
+    total = 0.0
     for task_records in by_task.values():
-        limited = [record for record in task_records if int(record.get("trial_index", 0)) <= k]
-        if any(record.get("outcome") == "pass" for record in limited):
-            successes += 1
-    return successes / len(by_task)
+        trial_count = len(task_records)
+        effective_k = min(k, trial_count)
+        if effective_k <= 0:
+            continue
+
+        pass_count = sum(1 for record in task_records if record.get("outcome") == "pass")
+        fail_count = trial_count - pass_count
+
+        if pass_count <= 0:
+            task_pass_at_k = 0.0
+        elif effective_k > fail_count:
+            task_pass_at_k = 1.0
+        else:
+            task_pass_at_k = 1.0 - (comb(fail_count, effective_k) / comb(trial_count, effective_k))
+
+        total += task_pass_at_k
+    return total / len(by_task)
 
 
 def _alignment_counts(records: list[dict[str, Any]]) -> dict[str, int]:
@@ -53,7 +67,7 @@ def _summarize_group(base_fields: dict[str, Any], records: list[dict[str, Any]],
 
 def aggregate_trial_results(
     records: list[dict[str, Any]],
-    pass_k_values: tuple[int, ...] = (1, 5),
+    pass_k_values: tuple[int, ...] = (3, 5),
 ) -> dict[str, list[dict[str, Any]]]:
     """Aggregate trial-level records into model/task/category/alignment summaries."""
 

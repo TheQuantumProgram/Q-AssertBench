@@ -6,7 +6,7 @@
       },
       "alignment_label": "aligned",
       "model_id": "gpt-5.4",
-      "pass@1": 0.4,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 52,
       "pass_rate": 1.0,
@@ -18,7 +18,7 @@
       },
       "alignment_label": "misaligned",
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -30,8 +30,8 @@
       },
       "alignment_label": "partially_aligned",
       "model_id": "gpt-5.4",
-      "pass@1": 0.7714285714285715,
-      "pass@5": 0.9428571428571428,
+      "pass@3": 0.8647279964617425,
+      "pass@5": 0.9014654107256939,
       "pass_count": 532,
       "pass_rate": 0.7766423357664234,
       "trial_count": 685
@@ -44,8 +44,8 @@
         "partially_aligned": 38
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8403508771929824,
+      "pass@5": 0.9354360165118679,
       "pass_count": 25,
       "pass_rate": 0.625,
       "task_category": "algorithmic_semantics_oracle_relation",
@@ -56,8 +56,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_category": "arithmetic_circuit_state_relation",
@@ -68,8 +68,8 @@
         "partially_aligned": 120
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.991812865497076,
+      "pass@5": 0.9993980048159615,
       "pass_count": 111,
       "pass_rate": 0.925,
       "task_category": "basic_behavior_distribution",
@@ -81,7 +81,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 60,
       "pass_rate": 1.0,
@@ -93,7 +93,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -106,8 +106,8 @@
         "partially_aligned": 19
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.4035087719298246,
+      "pass@5": 0.6008771929824561,
       "pass_count": 3,
       "pass_rate": 0.15,
       "task_category": "bernstein_vazirani_distribution",
@@ -119,7 +119,7 @@
         "partially_aligned": 16
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -131,7 +131,7 @@
         "partially_aligned": 40
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 40,
       "pass_rate": 1.0,
@@ -143,7 +143,7 @@
         "partially_aligned": 40
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 40,
       "pass_rate": 1.0,
@@ -155,8 +155,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6008771929824561,
+      "pass@5": 0.8063080495356038,
       "pass_count": 5,
       "pass_rate": 0.25,
       "task_category": "grover_distribution",
@@ -167,7 +167,7 @@
         "partially_aligned": 60
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 60,
       "pass_rate": 1.0,
@@ -179,7 +179,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -192,7 +192,7 @@
         "partially_aligned": 19
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -204,8 +204,8 @@
         "partially_aligned": 40
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.14210526315789473,
+      "pass@5": 0.22368421052631576,
       "pass_count": 2,
       "pass_rate": 0.05,
       "task_category": "qft_periodicity",
@@ -216,7 +216,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -228,7 +228,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -240,8 +240,8 @@
         "partially_aligned": 60
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.3333333333333333,
-      "pass@5": 1.0,
+      "pass@3": 0.8669590643274855,
+      "pass@5": 0.9354360165118679,
       "pass_count": 42,
       "pass_rate": 0.7,
       "task_category": "shor_periodicity",
@@ -252,7 +252,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -265,8 +265,8 @@
         "partially_aligned": 33
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.575,
+      "pass@5": 0.625,
       "pass_count": 21,
       "pass_rate": 0.525,
       "task_category": "simons_oracle_relation",
@@ -277,7 +277,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -289,8 +289,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9692982456140351,
+      "pass@5": 0.9986455108359134,
       "pass_count": 13,
       "pass_rate": 0.65,
       "task_category": "structured_support_entanglement",
@@ -305,8 +305,8 @@
         "partially_aligned": 685
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.7837837837837838,
-      "pass@5": 0.9459459459459459,
+      "pass@3": 0.8735419630156471,
+      "pass@5": 0.9093956572671744,
       "pass_count": 584,
       "pass_rate": 0.7891891891891892,
       "trial_count": 740
@@ -318,7 +318,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -330,7 +330,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -342,7 +342,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -354,7 +354,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -366,7 +366,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -378,7 +378,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -390,8 +390,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_id": "QAB07",
@@ -402,7 +402,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -414,7 +414,7 @@
         "aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -426,7 +426,7 @@
         "aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -438,7 +438,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -450,7 +450,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -462,7 +462,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -474,7 +474,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -487,8 +487,8 @@
         "partially_aligned": 19
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.4035087719298246,
+      "pass@5": 0.6008771929824561,
       "pass_count": 3,
       "pass_rate": 0.15,
       "task_id": "QAB15",
@@ -500,7 +500,7 @@
         "partially_aligned": 16
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -512,7 +512,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -524,8 +524,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB18",
@@ -537,7 +537,7 @@
         "partially_aligned": 13
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -550,8 +550,8 @@
         "partially_aligned": 18
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_id": "QAB20",
@@ -562,8 +562,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.28421052631578947,
+      "pass@5": 0.4473684210526315,
       "pass_count": 2,
       "pass_rate": 0.1,
       "task_id": "QAB21",
@@ -574,7 +574,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -586,7 +586,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -598,8 +598,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6008771929824561,
+      "pass@5": 0.8063080495356038,
       "pass_count": 5,
       "pass_rate": 0.25,
       "task_id": "QAB24",
@@ -610,7 +610,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -622,7 +622,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -634,7 +634,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -646,7 +646,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -658,7 +658,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -670,8 +670,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6008771929824561,
+      "pass@5": 0.8063080495356038,
       "pass_count": 5,
       "pass_rate": 0.25,
       "task_id": "QAB30",
@@ -682,7 +682,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -694,7 +694,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -706,8 +706,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_id": "QAB33",
@@ -719,7 +719,7 @@
         "partially_aligned": 19
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -731,8 +731,8 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9692982456140351,
+      "pass@5": 0.9986455108359134,
       "pass_count": 13,
       "pass_rate": 0.65,
       "task_id": "QAB35",
@@ -743,7 +743,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -755,7 +755,7 @@
         "partially_aligned": 20
       },
       "model_id": "gpt-5.4",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,

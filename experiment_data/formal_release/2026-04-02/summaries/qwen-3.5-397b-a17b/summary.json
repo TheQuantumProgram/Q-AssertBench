@@ -6,8 +6,8 @@
       },
       "alignment_label": "aligned",
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.25,
-      "pass@5": 0.5,
+      "pass@3": 1.0,
+      "pass@5": 1.0,
       "pass_count": 14,
       "pass_rate": 1.0,
       "trial_count": 14
@@ -18,7 +18,7 @@
       },
       "alignment_label": "misaligned",
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -30,7 +30,7 @@
       },
       "alignment_label": "not_assessable",
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -42,8 +42,8 @@
       },
       "alignment_label": "partially_aligned",
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.6486486486486487,
-      "pass@5": 0.8648648648648649,
+      "pass@3": 0.8638437386115406,
+      "pass@5": 0.8979601398332049,
       "pass_count": 488,
       "pass_rate": 0.7507692307692307,
       "trial_count": 650
@@ -56,7 +56,7 @@
         "partially_aligned": 37
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9982456140350877,
       "pass@5": 1.0,
       "pass_count": 35,
       "pass_rate": 0.875,
@@ -69,7 +69,7 @@
         "partially_aligned": 16
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -82,8 +82,8 @@
         "partially_aligned": 109
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.6666666666666666,
-      "pass@5": 0.8333333333333334,
+      "pass@3": 0.7994152046783626,
+      "pass@5": 0.8532529239766081,
       "pass_count": 73,
       "pass_rate": 0.6083333333333333,
       "task_category": "basic_behavior_distribution",
@@ -96,7 +96,7 @@
         "partially_aligned": 44
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9985380116959064,
       "pass@5": 1.0,
       "pass_count": 52,
       "pass_rate": 0.8666666666666667,
@@ -109,7 +109,7 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -122,8 +122,8 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9824561403508771,
+      "pass@5": 0.9996130030959752,
       "pass_count": 14,
       "pass_rate": 0.7,
       "task_category": "bernstein_vazirani_distribution",
@@ -135,7 +135,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -148,7 +148,7 @@
         "partially_aligned": 38
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9995614035087719,
       "pass@5": 1.0,
       "pass_count": 37,
       "pass_rate": 0.925,
@@ -162,7 +162,7 @@
         "partially_aligned": 38
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 37,
       "pass_rate": 0.925,
@@ -175,8 +175,8 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_category": "grover_distribution",
@@ -189,7 +189,7 @@
         "partially_aligned": 54
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.6666666666666666,
+      "pass@3": 0.666374269005848,
       "pass@5": 0.6666666666666666,
       "pass_count": 35,
       "pass_rate": 0.5833333333333334,
@@ -202,8 +202,8 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_category": "hhl_solution_pattern",
@@ -216,7 +216,7 @@
         "partially_aligned": 14
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -229,8 +229,8 @@
         "partially_aligned": 35
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8311403508771931,
+      "pass@5": 0.9595588235294117,
       "pass_count": 17,
       "pass_rate": 0.425,
       "task_category": "qft_periodicity",
@@ -241,7 +241,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -253,7 +253,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -266,8 +266,8 @@
         "partially_aligned": 49
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.3333333333333333,
-      "pass@5": 0.6666666666666666,
+      "pass@3": 0.702046783625731,
+      "pass@5": 0.8415247678018577,
       "pass_count": 25,
       "pass_rate": 0.4166666666666667,
       "task_category": "shor_periodicity",
@@ -279,7 +279,7 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -293,8 +293,8 @@
         "partially_aligned": 30
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.5,
-      "pass@5": 0.5,
+      "pass@3": 0.6403508771929824,
+      "pass@5": 0.7236842105263157,
       "pass_count": 18,
       "pass_rate": 0.45,
       "task_category": "simons_oracle_relation",
@@ -305,7 +305,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -318,7 +318,7 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -335,8 +335,8 @@
         "partially_aligned": 650
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.6756756756756757,
-      "pass@5": 0.8648648648648649,
+      "pass@3": 0.8497866287339974,
+      "pass@5": 0.888579756226815,
       "pass_count": 502,
       "pass_rate": 0.6783783783783783,
       "trial_count": 740
@@ -349,7 +349,7 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -362,7 +362,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -375,7 +375,7 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -388,8 +388,8 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9692982456140351,
+      "pass@5": 0.9986455108359134,
       "pass_count": 13,
       "pass_rate": 0.65,
       "task_id": "QAB04",
@@ -401,8 +401,8 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_id": "QAB05",
@@ -414,8 +414,8 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB06",
@@ -427,7 +427,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -439,7 +439,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -453,7 +453,7 @@
         "partially_aligned": 15
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -467,7 +467,7 @@
         "partially_aligned": 12
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -479,7 +479,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -492,7 +492,7 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -505,7 +505,7 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -518,7 +518,7 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -531,8 +531,8 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9824561403508771,
+      "pass@5": 0.9996130030959752,
       "pass_count": 14,
       "pass_rate": 0.7,
       "task_id": "QAB15",
@@ -544,7 +544,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -557,7 +557,7 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -570,8 +570,8 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.28421052631578947,
+      "pass@5": 0.4473684210526315,
       "pass_count": 2,
       "pass_rate": 0.1,
       "task_id": "QAB18",
@@ -584,7 +584,7 @@
         "partially_aligned": 11
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -597,7 +597,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -610,8 +610,8 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8552631578947368,
+      "pass@5": 0.9702012383900929,
       "pass_count": 9,
       "pass_rate": 0.45,
       "task_id": "QAB21",
@@ -622,7 +622,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -634,7 +634,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -647,8 +647,8 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9508771929824561,
+      "pass@5": 0.9963880288957688,
       "pass_count": 12,
       "pass_rate": 0.6,
       "task_id": "QAB24",
@@ -661,7 +661,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -674,8 +674,8 @@
         "partially_aligned": 18
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_id": "QAB26",
@@ -687,7 +687,7 @@
         "partially_aligned": 16
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -700,8 +700,8 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_id": "QAB28",
@@ -713,8 +713,8 @@
         "partially_aligned": 16
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8070175438596492,
+      "pass@5": 0.9489164086687306,
       "pass_count": 8,
       "pass_rate": 0.4,
       "task_id": "QAB29",
@@ -726,8 +726,8 @@
         "partially_aligned": 15
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6008771929824561,
+      "pass@5": 0.8063080495356038,
       "pass_count": 5,
       "pass_rate": 0.25,
       "task_id": "QAB30",
@@ -739,7 +739,7 @@
         "partially_aligned": 17
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -751,7 +751,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -764,7 +764,7 @@
         "partially_aligned": 16
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -778,7 +778,7 @@
         "partially_aligned": 14
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -791,7 +791,7 @@
         "partially_aligned": 19
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -803,7 +803,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -815,7 +815,7 @@
         "partially_aligned": 20
       },
       "model_id": "qwen/qwen3.5-397b-a17b",
-      "pass@1": 0.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,

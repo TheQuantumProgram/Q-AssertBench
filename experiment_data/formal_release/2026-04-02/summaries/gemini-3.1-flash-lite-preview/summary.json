@@ -6,8 +6,8 @@
       },
       "alignment_label": "aligned",
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.14285714285714285,
-      "pass@5": 0.14285714285714285,
+      "pass@3": 1.0,
+      "pass@5": 1.0,
       "pass_count": 13,
       "pass_rate": 1.0,
       "trial_count": 13
@@ -18,7 +18,7 @@
       },
       "alignment_label": "misaligned",
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -30,8 +30,8 @@
       },
       "alignment_label": "partially_aligned",
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.5405405405405406,
-      "pass@5": 0.6756756756756757,
+      "pass@3": 0.6761979471731793,
+      "pass@5": 0.7209691787865162,
       "pass_count": 392,
       "pass_rate": 0.5490196078431373,
       "trial_count": 714
@@ -44,8 +44,8 @@
         "partially_aligned": 39
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.5,
-      "pass@5": 1.0,
+      "pass@3": 0.9469298245614035,
+      "pass@5": 0.9918730650154799,
       "pass_count": 27,
       "pass_rate": 0.675,
       "task_category": "algorithmic_semantics_oracle_relation",
@@ -56,7 +56,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -68,8 +68,8 @@
         "partially_aligned": 120
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.3333333333333333,
-      "pass@5": 0.3333333333333333,
+      "pass@3": 0.35833333333333334,
+      "pass@5": 0.375,
       "pass_count": 40,
       "pass_rate": 0.3333333333333333,
       "task_category": "basic_behavior_distribution",
@@ -81,8 +81,8 @@
         "partially_aligned": 57
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9897660818713451,
+      "pass@5": 0.9995485036119711,
       "pass_count": 52,
       "pass_rate": 0.8666666666666667,
       "task_category": "basic_behavior_entanglement",
@@ -93,8 +93,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8552631578947368,
+      "pass@5": 0.9702012383900929,
       "pass_count": 9,
       "pass_rate": 0.45,
       "task_category": "basic_behavior_state_relation",
@@ -105,7 +105,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -117,7 +117,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -130,7 +130,7 @@
         "partially_aligned": 39
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 38,
       "pass_rate": 0.95,
@@ -143,8 +143,8 @@
         "partially_aligned": 38
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9912280701754386,
+      "pass@5": 0.9998065015479876,
       "pass_count": 34,
       "pass_rate": 0.85,
       "task_category": "deutsch_jozsa_oracle_relation",
@@ -155,7 +155,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -168,7 +168,7 @@
         "partially_aligned": 56
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 57,
       "pass_rate": 0.95,
@@ -180,8 +180,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_category": "hhl_solution_pattern",
@@ -192,7 +192,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -205,8 +205,8 @@
         "partially_aligned": 29
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.5,
+      "pass@3": 0.34035087719298246,
+      "pass@5": 0.4354360165118679,
       "pass_count": 6,
       "pass_rate": 0.15,
       "task_category": "qft_periodicity",
@@ -218,7 +218,7 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -231,8 +231,8 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.4035087719298246,
+      "pass@5": 0.6008771929824561,
       "pass_count": 3,
       "pass_rate": 0.15,
       "task_category": "qpe_periodicity",
@@ -244,8 +244,8 @@
         "partially_aligned": 59
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.3333333333333333,
-      "pass@5": 0.6666666666666666,
+      "pass@3": 0.697076023391813,
+      "pass@5": 0.7987616099071206,
       "pass_count": 29,
       "pass_rate": 0.48333333333333334,
       "task_category": "shor_periodicity",
@@ -257,8 +257,8 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_category": "simons_distribution",
@@ -269,8 +269,8 @@
         "partially_aligned": 40
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9631578947368421,
+      "pass@5": 0.99593653250774,
       "pass_count": 31,
       "pass_rate": 0.775,
       "task_category": "simons_oracle_relation",
@@ -281,8 +281,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_category": "structured_support_distribution",
@@ -293,7 +293,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -309,8 +309,8 @@
         "partially_aligned": 714
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.5675675675675675,
-      "pass@5": 0.6756756756756757,
+      "pass@3": 0.6787814129919393,
+      "pass@5": 0.7229363651577273,
       "pass_count": 405,
       "pass_rate": 0.5472972972972973,
       "trial_count": 740
@@ -322,7 +322,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -334,7 +334,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -346,8 +346,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8552631578947368,
+      "pass@5": 0.9702012383900929,
       "pass_count": 9,
       "pass_rate": 0.45,
       "task_id": "QAB03",
@@ -358,7 +358,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -370,7 +370,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -382,8 +382,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB06",
@@ -394,7 +394,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -406,7 +406,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -419,8 +419,8 @@
         "partially_aligned": 17
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9692982456140351,
+      "pass@5": 0.9986455108359134,
       "pass_count": 13,
       "pass_rate": 0.65,
       "task_id": "QAB09",
@@ -431,7 +431,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -444,7 +444,7 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -456,7 +456,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 18,
       "pass_rate": 0.9,
@@ -468,7 +468,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -481,8 +481,8 @@
         "partially_aligned": 18
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9824561403508771,
+      "pass@5": 0.9996130030959752,
       "pass_count": 14,
       "pass_rate": 0.7,
       "task_id": "QAB14",
@@ -493,7 +493,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -505,7 +505,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -518,8 +518,8 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_id": "QAB17",
@@ -530,8 +530,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
-      "pass@5": 1.0,
+      "pass@3": 0.9263157894736842,
+      "pass@5": 0.9918730650154799,
       "pass_count": 11,
       "pass_rate": 0.55,
       "task_id": "QAB18",
@@ -542,7 +542,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -554,8 +554,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8947368421052632,
+      "pass@5": 0.9837461300309598,
       "pass_count": 10,
       "pass_rate": 0.5,
       "task_id": "QAB20",
@@ -567,7 +567,7 @@
         "partially_aligned": 9
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -580,7 +580,7 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9964912280701754,
       "pass@5": 1.0,
       "pass_count": 16,
       "pass_rate": 0.8,
@@ -593,7 +593,7 @@
         "partially_aligned": 16
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -605,7 +605,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -617,7 +617,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -629,8 +629,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.28421052631578947,
+      "pass@5": 0.4473684210526315,
       "pass_count": 2,
       "pass_rate": 0.1,
       "task_id": "QAB26",
@@ -642,7 +642,7 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -654,8 +654,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.5087719298245614,
+      "pass@5": 0.7182662538699691,
       "pass_count": 4,
       "pass_rate": 0.2,
       "task_id": "QAB28",
@@ -666,8 +666,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.6807017543859649,
+      "pass@5": 0.8708720330237358,
       "pass_count": 6,
       "pass_rate": 0.3,
       "task_id": "QAB29",
@@ -678,8 +678,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 1.0,
+      "pass@3": 0.8070175438596492,
+      "pass@5": 0.9489164086687306,
       "pass_count": 8,
       "pass_rate": 0.4,
       "task_id": "QAB30",
@@ -690,7 +690,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 19,
       "pass_rate": 0.95,
@@ -703,8 +703,8 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.4035087719298246,
+      "pass@5": 0.6008771929824561,
       "pass_count": 3,
       "pass_rate": 0.15,
       "task_id": "QAB32",
@@ -715,7 +715,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -727,7 +727,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
+      "pass@3": 0.0,
       "pass@5": 0.0,
       "pass_count": 0,
       "pass_rate": 0.0,
@@ -739,7 +739,7 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 1.0,
       "pass@5": 1.0,
       "pass_count": 20,
       "pass_rate": 1.0,
@@ -752,7 +752,7 @@
         "partially_aligned": 19
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 1.0,
+      "pass@3": 0.9991228070175439,
       "pass@5": 1.0,
       "pass_count": 17,
       "pass_rate": 0.85,
@@ -764,8 +764,8 @@
         "partially_aligned": 20
       },
       "model_id": "gemini-3.1-flash-lite-preview",
-      "pass@1": 0.0,
-      "pass@5": 0.0,
+      "pass@3": 0.15000000000000002,
+      "pass@5": 0.25,
       "pass_count": 1,
       "pass_rate": 0.05,
       "task_id": "QAB37",
