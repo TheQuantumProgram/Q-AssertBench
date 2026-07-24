@@ -10,6 +10,8 @@ The public artifact is organized around three components:
 - generation entry points that can query external model APIs without embedding any key in the repository
 - an execution-based evaluator that scores generated assertions into trial-level and summary-level benchmark results
 
+The paper-aligned formal experiment snapshot is under `experiment_data/formal_release/2026-04-02/`. It contains the six primary model runs used for the released comparison, with Gemini represented by `gemini-3-flash-preview`.
+
 ## Quick Start
 
 ### 1. Clone the repository
@@ -100,5 +102,5 @@ The released evaluation pipeline is provider-agnostic once a `generation_records
 - `scripts/summarize_results.py`: summary aggregation from trial-level results
 - `scripts/validate_tasks.py`: structural validation for the task catalog
 - `examples/client_templates/`: provider-safe reference manifests with no embedded keys
-- `experiments/`: experiment manifests used for the released study configurations
+- `experiments/`: experiment manifests used for released and supplementary study configurations
 - `experiment_data/formal_release/2026-04-02/`: paper-aligned released generations, raw results, and summaries
