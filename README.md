@@ -33,14 +33,14 @@ python -m pip install -e .
 ### 3. Validate the benchmark tasks
 
 ```bash
-python -m qasserbench.cli.validate_tasks
+python -m cli.validate_tasks
 ```
 
 ### 4. Generate assertion candidates
 
 ```bash
 export QAB_API_KEY="your-api-key"
-python -m qasserbench.cli.run_generation \
+python -m cli.run_generation \
   outputs/generated_instances/quickstart/model-a/generation_records.jsonl \
   --client openai-compatible \
   --api-base-url https://your-provider.example/v1 \
@@ -53,7 +53,7 @@ python -m qasserbench.cli.run_generation \
 ### 5. Evaluate generated results
 
 ```bash
-python -m qasserbench.cli.run_evaluation \
+python -m cli.run_evaluation \
   path/to/generation_records.jsonl \
   path/to/trial_results.jsonl
 ```
@@ -61,7 +61,7 @@ python -m qasserbench.cli.run_evaluation \
 ### 6. Summarize trial-level results
 
 ```bash
-python -m qasserbench.cli.summarize_results \
+python -m cli.summarize_results \
   path/to/trial_results.jsonl \
   path/to/summary.json
 ```
@@ -74,11 +74,11 @@ find outputs/generated_instances/YOUR_RUN -name generation_records.jsonl | while
   rel=${model_dir#outputs/generated_instances/}
   mkdir -p "outputs/raw_results/$rel" "outputs/summaries/$rel"
 
-  python -m qasserbench.cli.run_evaluation \
+  python -m cli.run_evaluation \
     "$gen" \
     "outputs/raw_results/$rel/trial_results.jsonl"
 
-  python -m qasserbench.cli.summarize_results \
+  python -m cli.summarize_results \
     "outputs/raw_results/$rel/trial_results.jsonl" \
     "outputs/summaries/$rel/summary.json"
 done
@@ -88,15 +88,15 @@ done
 
 - you must supply your own key through an environment variable such as `QAB_API_KEY`
 - different providers may require different base URLs, model IDs, token limits, timeouts, or even a different client mode such as `anthropic-native` or `gemini-native`
-- manifest-driven generation is available through `python -m qasserbench.cli.run_generation --manifest path/to/manifest.yaml`
+- manifest-driven generation is available through `python -m cli.run_generation --manifest path/to/manifest.yaml`
 
 The evaluation pipeline is provider-agnostic once a `generation_records.jsonl` file has been produced. This scoring stage converts generated assertions into execution outcomes, alignment scores, and aggregate summaries.
 
 ## Project Structure
 
 - `Benchmark_Tasks/`: canonical task catalog, including prompts, gold assertions, and fault-injected counterparts
-- `src/qasserbench/`: benchmark loader, generation clients, execution runtime, evaluation logic, and reporting utilities
-- `python -m qasserbench.cli.run_generation`: repeated assertion generation for single-model or manifest-driven runs
-- `python -m qasserbench.cli.run_evaluation`: execution-based evaluation from `generation_records.jsonl` to `trial_results.jsonl`
-- `python -m qasserbench.cli.summarize_results`: summary aggregation from trial-level results
-- `python -m qasserbench.cli.validate_tasks`: structural validation for the task catalog
+- `src/`: benchmark loader, generation clients, execution runtime, evaluation logic, and reporting utilities
+- `python -m cli.run_generation`: repeated assertion generation for single-model or manifest-driven runs
+- `python -m cli.run_evaluation`: execution-based evaluation from `generation_records.jsonl` to `trial_results.jsonl`
+- `python -m cli.summarize_results`: summary aggregation from trial-level results
+- `python -m cli.validate_tasks`: structural validation for the task catalog
