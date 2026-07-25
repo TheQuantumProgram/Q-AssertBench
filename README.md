@@ -1,16 +1,14 @@
 # Q-AssertBench Project Code
 
-Q-AssertBench is a benchmark framework for studying assertion generation in quantum programs. This repository contains the runnable task catalog, generation clients, and execution-based evaluation pipeline used to reproduce or extend the released experiments, with particular emphasis on the scoring stage that turns raw generations into benchmark outcomes.
+Q-AssertBench is a benchmark framework for studying assertion generation in quantum programs. This repository contains the runnable task catalog, generation clients, execution-based evaluation pipeline, and reporting utilities for running new assertion-generation studies.
 
 ## Overview
 
 The public artifact is organized around three components:
 
 - benchmark tasks with prompts, gold assertions, and designated faulty counterparts
-- generation entry points that can query external model APIs without embedding any key in the repository
+- generation entry points that query external model APIs with credentials supplied through environment variables
 - an execution-based evaluator that scores generated assertions into trial-level and summary-level benchmark results
-
-The paper-aligned formal experiment snapshot is under `experiment_data/formal_release/2026-04-02/`. It contains the six primary model runs used for the released comparison, with Gemini represented by `gemini-3-flash-preview`.
 
 ## Quick Start
 
@@ -66,18 +64,18 @@ python scripts/summarize_results.py \
 ### 7. Batch-evaluate a run directory
 
 ```bash
-find experiment_data/generated_instances/YOUR_RUN -name generation_records.jsonl | while read -r gen; do
+find outputs/generated_instances/YOUR_RUN -name generation_records.jsonl | while read -r gen; do
   model_dir=$(dirname "$gen")
-  rel=${model_dir#experiment_data/generated_instances/}
-  mkdir -p "experiment_data/raw_results/$rel" "experiment_data/summaries/$rel"
+  rel=${model_dir#outputs/generated_instances/}
+  mkdir -p "outputs/raw_results/$rel" "outputs/summaries/$rel"
 
   python scripts/run_evaluation.py \
     "$gen" \
-    "experiment_data/raw_results/$rel/trial_results.jsonl"
+    "outputs/raw_results/$rel/trial_results.jsonl"
 
   python scripts/summarize_results.py \
-    "experiment_data/raw_results/$rel/trial_results.jsonl" \
-    "experiment_data/summaries/$rel/summary.json"
+    "outputs/raw_results/$rel/trial_results.jsonl" \
+    "outputs/summaries/$rel/summary.json"
 done
 ```
 
@@ -86,21 +84,17 @@ done
 The reference manifest at `examples/client_templates/openai-compatible.example.yaml` is intentionally provider-safe:
 
 - copy it to a writable location and edit the provider-specific fields before running `run_generation.py`
-- no API key is stored in the repository
 - you must supply your own key through an environment variable such as `QAB_API_KEY`
 - different providers may require different base URLs, model IDs, token limits, timeouts, or even a different client mode such as `anthropic-native` or `gemini-native`
 
-The released evaluation pipeline is provider-agnostic once a `generation_records.jsonl` file has been produced. This scoring stage is the canonical path used for the released experiment data.
+The evaluation pipeline is provider-agnostic once a `generation_records.jsonl` file has been produced. This scoring stage converts generated assertions into execution outcomes, alignment scores, and aggregate summaries.
 
 ## Project Structure
 
 - `benchmark_data/tasks/`: canonical task catalog, including prompts, gold assertions, and fault-injected counterparts
 - `src/qasserbench/`: benchmark loader, generation clients, execution runtime, evaluation logic, and reporting utilities
-- `tests/`: retained core tests for task loading and evaluation; internal recovery and provider-specific tests are intentionally omitted from the public artifact
 - `scripts/run_generation.py`: repeated assertion generation for single-model or manifest-driven runs
 - `scripts/run_evaluation.py`: execution-based evaluation from `generation_records.jsonl` to `trial_results.jsonl`
 - `scripts/summarize_results.py`: summary aggregation from trial-level results
 - `scripts/validate_tasks.py`: structural validation for the task catalog
-- `examples/client_templates/`: provider-safe reference manifests with no embedded keys
-- `experiments/`: experiment manifests used for released and supplementary study configurations
-- `experiment_data/formal_release/2026-04-02/`: paper-aligned released generations, raw results, and summaries
+- `examples/client_templates/`: provider-safe reference manifests for common client configurations
