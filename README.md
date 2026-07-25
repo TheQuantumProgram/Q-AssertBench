@@ -27,8 +27,7 @@ This repository targets Python 3.10+. We recommend using a virtual environment s
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install -e . --no-deps --no-build-isolation
+python -m pip install -e .
 ```
 
 ### 3. Validate the benchmark tasks
@@ -40,9 +39,15 @@ python scripts/validate_tasks.py
 ### 4. Generate assertion candidates
 
 ```bash
-cp examples/client_templates/openai-compatible.example.yaml /tmp/qab-client.yaml
 export QAB_API_KEY="your-api-key"
-python scripts/run_generation.py --manifest /tmp/qab-client.yaml
+python scripts/run_generation.py \
+  outputs/generated_instances/quickstart/model-a/generation_records.jsonl \
+  --client openai-compatible \
+  --api-base-url https://your-provider.example/v1 \
+  --model your-provider/model-a \
+  --task-id QAB01 \
+  --task-id QAB02 \
+  --trials 2
 ```
 
 ### 5. Evaluate generated results
@@ -81,11 +86,9 @@ done
 
 ## Client Notes
 
-The reference manifest at `examples/client_templates/openai-compatible.example.yaml` is intentionally provider-safe:
-
-- copy it to a writable location and edit the provider-specific fields before running `run_generation.py`
 - you must supply your own key through an environment variable such as `QAB_API_KEY`
 - different providers may require different base URLs, model IDs, token limits, timeouts, or even a different client mode such as `anthropic-native` or `gemini-native`
+- manifest-driven generation is available through `scripts/run_generation.py --manifest path/to/manifest.yaml`
 
 The evaluation pipeline is provider-agnostic once a `generation_records.jsonl` file has been produced. This scoring stage converts generated assertions into execution outcomes, alignment scores, and aggregate summaries.
 
@@ -97,4 +100,3 @@ The evaluation pipeline is provider-agnostic once a `generation_records.jsonl` f
 - `scripts/run_evaluation.py`: execution-based evaluation from `generation_records.jsonl` to `trial_results.jsonl`
 - `scripts/summarize_results.py`: summary aggregation from trial-level results
 - `scripts/validate_tasks.py`: structural validation for the task catalog
-- `examples/client_templates/`: provider-safe reference manifests for common client configurations
