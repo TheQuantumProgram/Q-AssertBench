@@ -1,0 +1,25 @@
+task_id: QAB02
+title: Check whether the measured two-qubit outcomes match a Bell-state pattern
+family: basic_behavior
+property_type: entanglement
+qubit_count: 2
+shots: 1024
+llm_source_line_count: 20
+circuit_gate_count: 2
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - 'assert not unexpected_outcomes'
+  - 'assert abs(ratio_00 - ratio_11) < 0.1'
+  optional_substrings:
+  - 'allowed_outcomes = {"00", "11"}'
+  - ratio_00 = counts.get("00", 0) / shots
+  - ratio_11 = counts.get("11", 0) / shots
+fault_variants:
+- id: non_entangled
+  path: faults/non_entangled.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

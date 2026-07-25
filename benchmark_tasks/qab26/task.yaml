@@ -1,0 +1,24 @@
+task_id: QAB26
+title: Shor balanced period peaks
+family: shor
+property_type: periodicity
+qubit_count: 5
+shots: 1024
+llm_source_line_count: 37
+circuit_gate_count: 14
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - expected_peaks
+    - peak_ratios
+  optional_substrings:
+    - invalid_outcomes
+    - balanced period peak
+fault_variants:
+  - id: skewed_period_peaks
+    path: faults/skewed_period_peaks.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

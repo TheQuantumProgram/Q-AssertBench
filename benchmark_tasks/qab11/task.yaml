@@ -1,0 +1,24 @@
+task_id: QAB11
+title: Deutsch balanced-oracle decision bit
+family: deutsch_family
+property_type: oracle_relation
+qubit_count: 2
+shots: 1024
+llm_source_line_count: 26
+circuit_gate_count: 6
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - balanced_ratio
+    - counts.get("1", 0)
+  optional_substrings:
+    - unexpected_states
+    - balanced oracle
+fault_variants:
+  - id: identity_oracle
+    path: faults/identity_oracle.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

@@ -94,7 +94,7 @@ The evaluation pipeline is provider-agnostic once a `generation_records.jsonl` f
 
 ## Project Structure
 
-- `Benchmark_Tasks/`: canonical task catalog, including prompts, gold assertions, and fault-injected counterparts
+- `benchmark_tasks/`: canonical task catalog, including prompts, gold assertions, and fault-injected counterparts
 - `src/`: benchmark loader, generation clients, execution runtime, evaluation logic, and reporting utilities
 - `python -m cli.run_generation`: repeated assertion generation for single-model or manifest-driven runs
 - `python -m cli.run_evaluation`: execution-based evaluation from `generation_records.jsonl` to `trial_results.jsonl`

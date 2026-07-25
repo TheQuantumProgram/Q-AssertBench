@@ -1,0 +1,24 @@
+task_id: QAB34
+title: This program runs a six-layer QAOA circuit for a six-node cycle max-cut instance
+family: qaoa
+property_type: solution_pattern
+qubit_count: 6
+shots: 2048
+llm_source_line_count: 344
+circuit_gate_count: 294
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - 'assert top_state in {"010101", "101010"}'
+  - assert good_ratio > 0.75
+  optional_substrings:
+  - 'good_states = {"010101", "101010"}'
+  - assert top_two_ratio > 0.8
+fault_variants:
+- id: missing_cost_edge
+  path: faults/missing_cost_edge.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

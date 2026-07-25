@@ -1,0 +1,25 @@
+task_id: QAB18
+title: Simon pairwise branch structure
+family: simons
+property_type: oracle_relation
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 44
+circuit_gate_count: 8
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - branch_inputs
+    - hidden_period
+    - xor_bitstrings
+  optional_substrings:
+    - len(inputs) == 2
+    - Simon pair
+fault_variants:
+  - id: missing_pair_link
+    path: faults/missing_pair_link.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

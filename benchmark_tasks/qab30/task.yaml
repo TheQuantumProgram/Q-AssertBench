@@ -1,0 +1,23 @@
+task_id: QAB30
+title: This program models the counting-register output of a larger Shor-style order-finding circuit
+family: shor
+property_type: periodicity
+qubit_count: 15
+shots: 1024
+llm_source_line_count: 45
+circuit_gate_count: 104
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - assert dominant_ratio < 0.75
+  optional_substrings:
+  - top_six_ratio = sum(count for _, count in sorted_counts[:6]) / shots
+  - significant_states = [state for state, count in counts.items() if count / shots >= 0.02]
+fault_variants:
+- id: missing_phase_entanglement
+  path: faults/missing_phase_entanglement.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

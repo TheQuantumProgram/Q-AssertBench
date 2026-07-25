@@ -25,7 +25,7 @@ def compute_task_manifest_metrics(assets) -> dict[str, int]:
     }
 
 
-def validate_tasks(tasks_root: str | Path = Path("Benchmark_Tasks")) -> int:
+def validate_tasks(tasks_root: str | Path = Path("benchmark_tasks")) -> int:
     tasks_root = Path(tasks_root)
 
     manifest_paths = sorted(tasks_root.glob("*/task.yaml"))
@@ -57,7 +57,7 @@ def main() -> int:
     parser.add_argument(
         "--tasks-root",
         type=Path,
-        default=Path("Benchmark_Tasks"),
+        default=Path("benchmark_tasks"),
         help="Root directory containing task folders with task.yaml files",
     )
     args = parser.parse_args()

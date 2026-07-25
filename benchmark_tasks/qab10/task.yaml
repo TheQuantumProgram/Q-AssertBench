@@ -1,0 +1,26 @@
+task_id: QAB10
+title: GHZ-state outcome restriction
+family: basic_behavior
+property_type: entanglement
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 22
+circuit_gate_count: 4
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - valid_ratio
+    - '"0000"'
+    - '"1111"'
+  optional_substrings:
+    - ratio_0000
+    - ratio_1111
+    - abs(ratio_0000 - ratio_1111)
+fault_variants:
+  - id: broken_ghz_link
+    path: faults/broken_ghz_link.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

@@ -1,0 +1,25 @@
+task_id: QAB12
+title: Deutsch configurable-oracle consistency
+family: deutsch_family
+property_type: oracle_relation
+qubit_count: 2
+shots: 1024
+llm_source_line_count: 34
+circuit_gate_count: 4
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - oracle_type
+    - counts.get("0", 0)
+    - counts.get("1", 0)
+  optional_substrings:
+    - expected_state
+    - expected_ratio
+fault_variants:
+  - id: miswired_constant_case
+    path: faults/miswired_constant_case.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

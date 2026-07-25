@@ -93,7 +93,7 @@ def resolve_manifest_task_ids(manifest: dict[str, Any]) -> list[str]:
     defaults = manifest.get("defaults", {})
     if not isinstance(defaults, dict):
         raise ValueError("Manifest defaults must be a mapping.")
-    tasks_root = defaults.get("tasks_root", "Benchmark_Tasks")
+    tasks_root = defaults.get("tasks_root", "benchmark_tasks")
 
     task_selection = manifest.get("task_selection", {}) or {}
     if not isinstance(task_selection, dict):
@@ -227,7 +227,7 @@ def run_manifest_generation_experiment(manifest_path: str | Path) -> list[Path]:
         raise ValueError("Manifest models must be a list.")
 
     task_ids = resolve_manifest_task_ids(manifest)
-    tasks_root = Path(str(defaults.get("tasks_root", "Benchmark_Tasks"))).resolve()
+    tasks_root = Path(str(defaults.get("tasks_root", "benchmark_tasks"))).resolve()
     output_dir = Path(str(defaults.get("output_dir"))).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -353,7 +353,7 @@ def main() -> int:
     parser.add_argument(
         "--tasks-root",
         type=Path,
-        default=Path("Benchmark_Tasks"),
+        default=Path("benchmark_tasks"),
         help="Root directory containing task folders with task.yaml files",
     )
     parser.add_argument(

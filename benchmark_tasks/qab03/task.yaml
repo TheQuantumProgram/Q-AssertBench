@@ -1,0 +1,24 @@
+task_id: QAB03
+title: Verify that q0 reproduces the measurement behavior initially prepared on q2
+family: basic_behavior
+property_type: state_relation
+qubit_count: 3
+shots: 1024
+llm_source_line_count: 32
+circuit_gate_count: 5
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - assert abs(q0_one_ratio - 0.7) < tolerance, (
+  optional_substrings:
+  - tolerance = 0.1
+  - q0_one_counts = sum(count for bitstring, count in counts.items() if bitstring[-1]
+    == "1")
+fault_variants:
+- id: wrong_swap_order
+  path: faults/wrong_swap_order.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

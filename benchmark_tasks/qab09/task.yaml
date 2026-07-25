@@ -1,0 +1,26 @@
+task_id: QAB09
+title: Bell-state measurement correlation
+family: basic_behavior
+property_type: entanglement
+qubit_count: 2
+shots: 1024
+llm_source_line_count: 20
+circuit_gate_count: 2
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - correlated_ratio
+    - '"00"'
+    - '"11"'
+  optional_substrings:
+    - ratio_00
+    - ratio_11
+    - abs(ratio_00 - ratio_11)
+fault_variants:
+  - id: missing_entangler
+    path: faults/missing_entangler.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

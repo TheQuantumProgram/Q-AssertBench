@@ -1,0 +1,24 @@
+task_id: QAB07
+title: Check whether a three-qubit superposition covers all basis states approximately uniformly
+family: basic_behavior
+property_type: distribution
+qubit_count: 3
+shots: 1024
+llm_source_line_count: 23
+circuit_gate_count: 5
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - 'assert observed_outcomes == expected_outcomes'
+  - 'assert max(probabilities.values()) - min(probabilities.values()) < 0.05'
+  optional_substrings:
+  - 'expected_outcomes = {format(index, "03b") for index in range(8)}'
+  - 'probabilities = {bitstring: counts.get(bitstring, 0) / shots for bitstring in expected_outcomes}'
+fault_variants:
+- id: partial_superposition
+  path: faults/faulty_program.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

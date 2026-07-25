@@ -1,0 +1,26 @@
+task_id: QAB14
+title: Deutsch-Jozsa configurable-oracle consistency
+family: deutsch_jozsa
+property_type: oracle_relation
+qubit_count: 3
+shots: 1024
+llm_source_line_count: 37
+circuit_gate_count: 6
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - oracle_type
+    - expected_state
+    - expected_ratio
+  optional_substrings:
+    - '"00"'
+    - '"11"'
+    - other_ratio
+fault_variants:
+  - id: forced_balanced_oracle
+    path: faults/forced_balanced_oracle.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

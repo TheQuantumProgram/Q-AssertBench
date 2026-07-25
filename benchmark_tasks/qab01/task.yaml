@@ -1,0 +1,31 @@
+task_id: QAB01
+title: Detect deterministic and non-deterministic qubit behavior in one circuit
+family: basic_behavior
+property_type: distribution
+qubit_count: 5
+shots: 1024
+llm_source_line_count: 22
+circuit_gate_count: 4
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - assert deterministic_qubits
+    - assert nondeterministic_qubits
+  optional_substrings:
+    - bit_occurrences
+    - deterministic_qubits
+    - nondeterministic_qubits
+  target_qubits:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+fault_variants:
+  - id: missing_classical_state
+    path: faults/missing_classical_state.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

@@ -106,7 +106,7 @@ def evaluate_generation_records(
     output_path: str | Path,
     backend: str = DEFAULT_SIMULATOR_BACKEND,
     seed: int | None = 7,
-    tasks_root: str | Path = Path("Benchmark_Tasks"),
+    tasks_root: str | Path = Path("benchmark_tasks"),
 ) -> Path:
     """Convert raw generation outputs into evaluated trial records."""
 
@@ -222,7 +222,7 @@ def main() -> int:
     parser.add_argument(
         "--tasks-root",
         type=Path,
-        default=Path("Benchmark_Tasks"),
+        default=Path("benchmark_tasks"),
         help="Root directory containing task folders with task.yaml files",
     )
     args = parser.parse_args()

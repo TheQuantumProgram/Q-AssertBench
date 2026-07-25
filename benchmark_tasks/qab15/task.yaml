@@ -1,0 +1,26 @@
+task_id: QAB15
+title: Bernstein-Vazirani state-preparation uniformity
+family: bernstein_vazirani
+property_type: distribution
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 43
+circuit_gate_count: 11
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+    - expected_probability
+    - probability
+    - 2 ** num_input_qubits
+  optional_substrings:
+    - State
+    - num_input_qubits
+    - abs(probability - expected_probability)
+fault_variants:
+  - id: missing_input_hadamard
+    path: faults/missing_input_hadamard.py
+    entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md

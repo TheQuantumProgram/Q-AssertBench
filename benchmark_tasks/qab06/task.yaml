@@ -1,0 +1,24 @@
+task_id: QAB06
+title: Check whether the intended four-qubit basis state dominates the measurement results
+family: basic_behavior
+property_type: distribution
+qubit_count: 4
+shots: 1024
+llm_source_line_count: 22
+circuit_gate_count: 4
+program_entry: program.py:PROGRAM
+gold_entry: gold.py:evaluate_gold_assertion
+gold_compare_mode: hybrid
+gold_metadata:
+  required_substrings:
+  - assert dominant_state == "1101"
+  - assert dominant_ratio > 0.85
+  optional_substrings:
+  - dominant_state = max(counts, key=counts.get)
+  - dominant_ratio = counts[dominant_state] / shots
+fault_variants:
+- id: reduced_dominance
+  path: faults/faulty_program.py
+  entry: PROGRAM
+insertion_mode: assertion_block
+prompt_file: prompt.md
